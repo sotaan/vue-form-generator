@@ -5,9 +5,9 @@
 </template>
 
 <script>
-	import {isObject} from "lodash";
+	import { isObject, isNil } from "lodash";
 	import abstractField from "./abstractField";
-	
+
 	export default {
 		mixins: [ abstractField ],
 
@@ -18,12 +18,12 @@
 					return values.apply(this, [this.model, this.schema]);
 				} else
 					return values;
-			}      
+			}
 		},
 
 		methods: {
 			getItemID(item) {
-				if (isObject(item) && item.id)
+				if (isObject(item) && !isNil(item.id))
 					return item.id;
 
 				return item;

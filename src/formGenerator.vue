@@ -30,7 +30,7 @@
 
 	export default {
 		components: fieldComponents,
-		
+
 		props: [
 			"schema",
 			"options",
@@ -38,7 +38,7 @@
 			"multiple",
 			"isNewModel"
 		],
-		
+
 		data () {
 			return {
 				errors: [] // Validation errors
@@ -80,14 +80,14 @@
 			else
 				this.clearValidationErrors();
 		},
-	
+
 		methods: {
 			getFieldRowClasses(field) {
 				let baseClasses = {
-					error: field.errors && field.errors.length > 0, 
-					disabled: this.fieldDisabled(field), 
-					readonly: field.readonly, 
-					featured: field.featured, 
+					error: field.errors && field.errors.length > 0,
+					disabled: this.fieldDisabled(field),
+					readonly: field.readonly,
+					featured: field.featured,
 					required: field.required
 				};
 
@@ -125,7 +125,7 @@
 					return true;
 
 				return field.visible;
-			},		
+			},
 
 			validate() {
 				this.clearValidationErrors();
@@ -151,25 +151,25 @@
 
 				each(this.$children, (child) => {
 					child.clearValidationErrors();
-				});				
+				});
 			}
 		}
 	};
-	
+
 </script>
 
 <style lang="sass">
-	
+
 	$errorColor: lighten(#F00, 0%);
 
 	fieldset {
-		
+
 		input, select, textarea {
 			border-radius: 4px;
 			border: 1px solid #BBB;
 			padding: 2px 5px;
 		}
-		
+
 		span.help {
 			margin-left: 0.3em;
 			position: relative;
@@ -207,7 +207,7 @@
 				left: 0;
 				position: absolute;
 				width: 100%;
-			}  
+			}
 
 			/* CSS Triangles - see Trevor's post */
 			/*.helpText:after {
@@ -222,12 +222,12 @@
 				position: absolute;
 				width: 0;
 			}*/
-				
+
 			&:hover .helpText {
 				opacity: 1;
 				pointer-events: auto;
 				transform: translateY(0px);
-			}					
+			}
 		} // span.help
 
 		.field-wrap {
@@ -240,7 +240,7 @@
 					margin: 0 2px;
 				}
 			}
-		}		
+		}
 
 		.hint {
 			font-style: italic;
@@ -262,7 +262,7 @@
 			&.featured {
 				label {
 					font-weight: bold;
-				}			
+				}
 			}
 
 			&.required {
@@ -270,24 +270,24 @@
 					content: "*";
 					font-weight: normal;
 					color: Red;
-					position: absolute;
+					/*position: absolute;*/
 					padding-left: 0.2em;
 					font-size: 1em;
-				}	
+				}
 			}
 
 			&.disabled {
 				label {
 					color: #666;
 					font-style: italic;
-				}			
+				}
 			}
 
 			&.error {
 
 				label {
 					//color: $errorColor;
-				}			
+				}
 
 				input:not([type="checkbox"]), textarea, select {
 					border: 1px solid $errorColor;
@@ -307,7 +307,7 @@
 							font-weight: 600;
 					}
 
-				} // .errors	
+				} // .errors
 
 			} // .error
 
