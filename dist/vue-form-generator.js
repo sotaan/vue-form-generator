@@ -105,7 +105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\formGenerator.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/formGenerator.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(266)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -159,7 +159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "fieldset input, fieldset select, fieldset textarea {\n  border-radius: 4px;\n  border: 1px solid #BBB;\n  padding: 2px 5px; }\n\nfieldset span.help {\n  margin-left: 0.3em;\n  position: relative;\n  /* This bridges the gap so you can mouse into the tooltip without it disappearing */\n  /* CSS Triangles - see Trevor's post */\n  /*.helpText:after {\n\t\t\tborder-left: solid transparent 10px;\n\t\t\tborder-right: solid transparent 10px;\n\t\t\tborder-top: solid #1496bb 10px;\n\t\t\tbottom: -10px;\n\t\t\tcontent: \" \";\n\t\t\theight: 0;\n\t\t\tleft: 50%;\n\t\t\tmargin-left: -13px;\n\t\t\tposition: absolute;\n\t\t\twidth: 0;\n\t\t}*/ }\n  fieldset span.help .helpText {\n    background-color: #444;\n    bottom: 30px;\n    color: #fff;\n    display: block;\n    left: 0px;\n    opacity: 0;\n    padding: 20px;\n    pointer-events: none;\n    position: absolute;\n    text-align: justify;\n    width: 300px;\n    -webkit-transition: all .25s ease-out;\n    transition: all .25s ease-out;\n    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);\n    border-radius: 6px; }\n    fieldset span.help .helpText a {\n      font-weight: bold;\n      text-decoration: underline; }\n  fieldset span.help .helpText:before {\n    bottom: -20px;\n    content: \" \";\n    display: block;\n    height: 20px;\n    left: 0;\n    position: absolute;\n    width: 100%; }\n  fieldset span.help:hover .helpText {\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0px);\n            transform: translateY(0px); }\n\nfieldset .field-wrap {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  fieldset .field-wrap .buttons {\n    white-space: nowrap; }\n    fieldset .field-wrap .buttons button {\n      display: inline-block;\n      margin: 0 2px; }\n\nfieldset .hint {\n  font-style: italic;\n  font-size: 0.8em; }\n\nfieldset .form-group {\n  display: inline-block;\n  vertical-align: top;\n  width: 100%;\n  margin-bottom: 1rem; }\n  fieldset .form-group label {\n    font-weight: 400; }\n  fieldset .form-group.featured label {\n    font-weight: bold; }\n  fieldset .form-group.required label:after {\n    content: \"*\";\n    font-weight: normal;\n    color: Red;\n    position: absolute;\n    padding-left: 0.2em;\n    font-size: 1em; }\n  fieldset .form-group.disabled label {\n    color: #666;\n    font-style: italic; }\n  fieldset .form-group.error input:not([type=\"checkbox\"]), fieldset .form-group.error textarea, fieldset .form-group.error select {\n    border: 1px solid red;\n    background-color: rgba(255, 0, 0, 0.15); }\n  fieldset .form-group.error .errors {\n    color: red;\n    font-size: 0.80em; }\n    fieldset .form-group.error .errors span {\n      display: block;\n      background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAiklEQVR4Xt2TMQoCQQxF3xdhu72MpZU3GU/meBFLOztPYrVWsQmEWSaMsIXgK8P8RyYkMjO2sAN+K9gTIAmDAlzoUzE7p4IFytvDCQWJKSStYB2efcAvqZFM0BcstMx5naSDYFzfLhh/4SmRM+6Agw/xIX0tKEDFufeDNRUc4XqLRz3qabVIf3BMHwl6Ktexn3nmAAAAAElFTkSuQmCC\");\n      background-repeat: no-repeat;\n      padding-left: 17px;\n      padding-top: 0px;\n      margin-top: 0.2em;\n      font-weight: 600; }\n", ""]);
+	exports.push([module.id, "fieldset input, fieldset select, fieldset textarea {\n  border-radius: 4px;\n  border: 1px solid #BBB;\n  padding: 2px 5px; }\n\nfieldset span.help {\n  margin-left: 0.3em;\n  position: relative;\n  /* This bridges the gap so you can mouse into the tooltip without it disappearing */\n  /* CSS Triangles - see Trevor's post */\n  /*.helpText:after {\n\t\t\tborder-left: solid transparent 10px;\n\t\t\tborder-right: solid transparent 10px;\n\t\t\tborder-top: solid #1496bb 10px;\n\t\t\tbottom: -10px;\n\t\t\tcontent: \" \";\n\t\t\theight: 0;\n\t\t\tleft: 50%;\n\t\t\tmargin-left: -13px;\n\t\t\tposition: absolute;\n\t\t\twidth: 0;\n\t\t}*/ }\n  fieldset span.help .helpText {\n    background-color: #444;\n    bottom: 30px;\n    color: #fff;\n    display: block;\n    left: 0px;\n    opacity: 0;\n    padding: 20px;\n    pointer-events: none;\n    position: absolute;\n    text-align: justify;\n    width: 300px;\n    -webkit-transition: all .25s ease-out;\n    transition: all .25s ease-out;\n    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);\n    border-radius: 6px; }\n    fieldset span.help .helpText a {\n      font-weight: bold;\n      text-decoration: underline; }\n  fieldset span.help .helpText:before {\n    bottom: -20px;\n    content: \" \";\n    display: block;\n    height: 20px;\n    left: 0;\n    position: absolute;\n    width: 100%; }\n  fieldset span.help:hover .helpText {\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0px);\n            transform: translateY(0px); }\n\nfieldset .field-wrap {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  fieldset .field-wrap .buttons {\n    white-space: nowrap; }\n    fieldset .field-wrap .buttons button {\n      display: inline-block;\n      margin: 0 2px; }\n\nfieldset .hint {\n  font-style: italic;\n  font-size: 0.8em; }\n\nfieldset .form-group {\n  display: inline-block;\n  vertical-align: top;\n  width: 100%;\n  margin-bottom: 1rem; }\n  fieldset .form-group label {\n    font-weight: 400; }\n  fieldset .form-group.featured label {\n    font-weight: bold; }\n  fieldset .form-group.required label:after {\n    content: \"*\";\n    font-weight: normal;\n    color: Red;\n    /*position: absolute;*/\n    padding-left: 0.2em;\n    font-size: 1em; }\n  fieldset .form-group.disabled label {\n    color: #666;\n    font-style: italic; }\n  fieldset .form-group.error input:not([type=\"checkbox\"]), fieldset .form-group.error textarea, fieldset .form-group.error select {\n    border: 1px solid red;\n    background-color: rgba(255, 0, 0, 0.15); }\n  fieldset .form-group.error .errors {\n    color: red;\n    font-size: 0.80em; }\n    fieldset .form-group.error .errors span {\n      display: block;\n      background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAiklEQVR4Xt2TMQoCQQxF3xdhu72MpZU3GU/meBFLOztPYrVWsQmEWSaMsIXgK8P8RyYkMjO2sAN+K9gTIAmDAlzoUzE7p4IFytvDCQWJKSStYB2efcAvqZFM0BcstMx5naSDYFzfLhh/4SmRM+6Agw/xIX0tKEDFufeDNRUc4XqLRz3qabVIf3BMHwl6Ktexn3nmAAAAAElFTkSuQmCC\");\n      background-repeat: no-repeat;\n      padding-left: 17px;\n      padding-top: 0px;\n      margin-top: 0.2em;\n      font-weight: 600; }\n", ""]);
 
 	// exports
 
@@ -26709,7 +26709,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldCheckbox.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldCheckbox.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(16)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -26744,8 +26744,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c65c5786&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldCheckbox.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c65c5786&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldCheckbox.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-491acff4&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldCheckbox.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-491acff4&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldCheckbox.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26763,7 +26763,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "input[type=checkbox][_v-c65c5786] {\n  margin-left: 12px; }\n", ""]);
+	exports.push([module.id, "input[type=checkbox][_v-491acff4] {\n  margin-left: 12px; }\n", ""]);
 
 	// exports
 
@@ -26876,7 +26876,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 16 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"checkbox\" v-model=\"value\" :disabled=\"disabled\" _v-c65c5786=\"\">";
+	module.exports = "<input type=\"checkbox\" v-model=\"value\" :disabled=\"disabled\" _v-491acff4=\"\">";
 
 /***/ },
 /* 17 */
@@ -26888,7 +26888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldChecklist.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldChecklist.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(21)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -26923,8 +26923,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6bfee3c8&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldChecklist.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6bfee3c8&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldChecklist.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-b251ed76&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldChecklist.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-b251ed76&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldChecklist.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26942,7 +26942,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".listbox[_v-6bfee3c8], .dropList[_v-6bfee3c8] {\n  height: auto;\n  max-height: 150px;\n  overflow: auto; }\n  .listbox .list-row label[_v-6bfee3c8], .dropList .list-row label[_v-6bfee3c8] {\n    font-weight: initial; }\n  .listbox .list-row input[_v-6bfee3c8], .dropList .list-row input[_v-6bfee3c8] {\n    margin-right: 0.3em; }\n\n.combobox[_v-6bfee3c8] {\n  height: initial;\n  overflow: hidden; }\n  .combobox .mainRow[_v-6bfee3c8] {\n    cursor: pointer;\n    position: relative; }\n    .combobox .mainRow .arrow[_v-6bfee3c8] {\n      position: absolute;\n      right: -6px;\n      top: 4px;\n      width: 16px;\n      height: 16px;\n      -webkit-transform: rotate(0deg);\n              transform: rotate(0deg);\n      -webkit-transition: -webkit-transform 0.5s;\n      transition: -webkit-transform 0.5s;\n      transition: transform 0.5s;\n      transition: transform 0.5s, -webkit-transform 0.5s;\n      background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAGdJREFUOI3tzjsOwjAURNGDUqSgTxU5K2AVrJtswjUsgHSR0qdxAZZFPrS+3ZvRzBsqf9MUtBtazJk+oMe0VTriiZCFX8nbpENMgfARjsn74vKj5IFruhfc8d6zIF9S/Hyk5HS4spMVeFcOjszaOwMAAAAASUVORK5CYII=\");\n      background-repeat: no-repeat; }\n    .combobox .mainRow.expanded .arrow[_v-6bfee3c8] {\n      -webkit-transform: rotate(-180deg);\n              transform: rotate(-180deg); }\n  .combobox .dropList[_v-6bfee3c8] {\n    -webkit-transition: height 0.5s;\n    transition: height 0.5s; }\n", ""]);
+	exports.push([module.id, ".listbox[_v-b251ed76], .dropList[_v-b251ed76] {\n  height: auto;\n  max-height: 150px;\n  overflow: auto; }\n  .listbox .list-row label[_v-b251ed76], .dropList .list-row label[_v-b251ed76] {\n    font-weight: initial; }\n  .listbox .list-row input[_v-b251ed76], .dropList .list-row input[_v-b251ed76] {\n    margin-right: 0.3em; }\n\n.combobox[_v-b251ed76] {\n  height: initial;\n  overflow: hidden; }\n  .combobox .mainRow[_v-b251ed76] {\n    cursor: pointer;\n    position: relative; }\n    .combobox .mainRow .arrow[_v-b251ed76] {\n      position: absolute;\n      right: -6px;\n      top: 4px;\n      width: 16px;\n      height: 16px;\n      -webkit-transform: rotate(0deg);\n              transform: rotate(0deg);\n      -webkit-transition: -webkit-transform 0.5s;\n      transition: -webkit-transform 0.5s;\n      transition: transform 0.5s;\n      transition: transform 0.5s, -webkit-transform 0.5s;\n      background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAGdJREFUOI3tzjsOwjAURNGDUqSgTxU5K2AVrJtswjUsgHSR0qdxAZZFPrS+3ZvRzBsqf9MUtBtazJk+oMe0VTriiZCFX8nbpENMgfARjsn74vKj5IFruhfc8d6zIF9S/Hyk5HS4spMVeFcOjszaOwMAAAAASUVORK5CYII=\");\n      background-repeat: no-repeat; }\n    .combobox .mainRow.expanded .arrow[_v-b251ed76] {\n      -webkit-transform: rotate(-180deg);\n              transform: rotate(-180deg); }\n  .combobox .dropList[_v-b251ed76] {\n    -webkit-transition: height 0.5s;\n    transition: height 0.5s; }\n", ""]);
 
 	// exports
 
@@ -27018,7 +27018,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 21 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-if=\"schema.listBox\" class=\"listbox form-control\" _v-6bfee3c8=\"\"><div v-for=\"item in items\" class=\"list-row\" _v-6bfee3c8=\"\"><label _v-6bfee3c8=\"\"><input type=\"checkbox\" :checked=\"getItemIsChecked(item)\" @change=\"onChanged($event, item)\" _v-6bfee3c8=\"\">{{ getItemName(item) }}</label></div></div><div v-if=\"!schema.listBox\" class=\"combobox form-control\" _v-6bfee3c8=\"\"><div @click=\"onExpandCombo\" :class=\"{ expanded: comboExpanded }\" class=\"mainRow\" _v-6bfee3c8=\"\"><div class=\"info\" _v-6bfee3c8=\"\">{{ selectedCount }} selected</div><div class=\"arrow\" _v-6bfee3c8=\"\"></div></div><div class=\"dropList\" _v-6bfee3c8=\"\"><div v-if=\"comboExpanded\" v-for=\"item in items\" class=\"list-row\" _v-6bfee3c8=\"\"><label _v-6bfee3c8=\"\"><input type=\"checkbox\" :checked=\"getItemIsChecked(item)\" @change=\"onChanged($event, item)\" _v-6bfee3c8=\"\">{{ getItemName(item) }}</label></div></div></div>";
+	module.exports = "<div v-if=\"schema.listBox\" class=\"listbox form-control\" _v-b251ed76=\"\"><div v-for=\"item in items\" class=\"list-row\" _v-b251ed76=\"\"><label _v-b251ed76=\"\"><input type=\"checkbox\" :checked=\"getItemIsChecked(item)\" @change=\"onChanged($event, item)\" _v-b251ed76=\"\">{{ getItemName(item) }}</label></div></div><div v-if=\"!schema.listBox\" class=\"combobox form-control\" _v-b251ed76=\"\"><div @click=\"onExpandCombo\" :class=\"{ expanded: comboExpanded }\" class=\"mainRow\" _v-b251ed76=\"\"><div class=\"info\" _v-b251ed76=\"\">{{ selectedCount }} selected</div><div class=\"arrow\" _v-b251ed76=\"\"></div></div><div class=\"dropList\" _v-b251ed76=\"\"><div v-if=\"comboExpanded\" v-for=\"item in items\" class=\"list-row\" _v-b251ed76=\"\"><label _v-b251ed76=\"\"><input type=\"checkbox\" :checked=\"getItemIsChecked(item)\" @change=\"onChanged($event, item)\" _v-b251ed76=\"\">{{ getItemName(item) }}</label></div></div></div>";
 
 /***/ },
 /* 22 */
@@ -27030,7 +27030,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldColor.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldColor.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(26)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -27065,8 +27065,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b40e459&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldColor.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b40e459&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldColor.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fdd5c02&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldColor.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fdd5c02&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldColor.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27084,7 +27084,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "span[_v-2b40e459] {\n  margin-left: 0.3em; }\n", ""]);
+	exports.push([module.id, "span[_v-1fdd5c02] {\n  margin-left: 0.3em; }\n", ""]);
 
 	// exports
 
@@ -27095,7 +27095,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 26 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"color\" v-model=\"value\" :disabled=\"disabled\" _v-2b40e459=\"\"><span class=\"helper\" _v-2b40e459=\"\">{{ value }}</span>";
+	module.exports = "<input type=\"color\" v-model=\"value\" :disabled=\"disabled\" _v-1fdd5c02=\"\"><span class=\"helper\" _v-1fdd5c02=\"\">{{ value }}</span>";
 
 /***/ },
 /* 27 */
@@ -27107,7 +27107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldDateTime.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldDateTime.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(133)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -27142,8 +27142,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-23b43c15&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldDateTime.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-23b43c15&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldDateTime.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-60059068&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldDateTime.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-60059068&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldDateTime.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27161,7 +27161,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "input[_v-23b43c15] {\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "input[_v-60059068] {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -40996,7 +40996,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 133 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"input-group date\" _v-23b43c15=\"\"><input type=\"text\" v-model=\"value\" :disabled=\"disabled\" class=\"form-control\" _v-23b43c15=\"\"><span class=\"input-group-addon\" _v-23b43c15=\"\"><span class=\"glyphicon glyphicon-calendar\" _v-23b43c15=\"\"></span></span></div>";
+	module.exports = "<div class=\"input-group date\" _v-60059068=\"\"><input type=\"text\" v-model=\"value\" :disabled=\"disabled\" class=\"form-control\" _v-60059068=\"\"><span class=\"input-group-addon\" _v-60059068=\"\"><span class=\"glyphicon glyphicon-calendar\" _v-60059068=\"\"></span></span></div>";
 
 /***/ },
 /* 134 */
@@ -41008,7 +41008,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldEmail.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldEmail.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(138)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41043,8 +41043,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-33913c12&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldEmail.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-33913c12&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldEmail.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-282db3bb&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldEmail.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-282db3bb&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldEmail.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41062,7 +41062,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "input[_v-33913c12] {\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "input[_v-282db3bb] {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -41073,7 +41073,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 138 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"email\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-33913c12=\"\">";
+	module.exports = "<input type=\"email\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-282db3bb=\"\">";
 
 /***/ },
 /* 139 */
@@ -41085,7 +41085,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldImage.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldImage.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(143)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41120,8 +41120,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-fe52bb5e&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldImage.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-fe52bb5e&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldImage.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-757319fa&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldImage.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-757319fa&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldImage.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41139,7 +41139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".wrapper[_v-fe52bb5e], input[_v-fe52bb5e] {\n  width: 100%; }\n\n.preview[_v-fe52bb5e] {\n  position: relative;\n  margin-top: 5px;\n  height: 100px;\n  background-repeat: no-repeat;\n  background-size: contain;\n  background-position: center center;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }\n  .preview .remove[_v-fe52bb5e] {\n    /*background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAXUlEQVR42u2SwQoAIAhD88vVLy8KBlaS0i1oJwP3piGVg0Skmpq8HjqZrWl9uwCbGAmwKYGZs/6iqgMyAdJuM8W2QmYKpLt/0AG9ASCv/oAnANd3AEjmAlFT1BypAV+PnRH5YehvAAAAAElFTkSuQmCC');\n\t\twidth: 16px;\n\t\theight: 16px;\n\t\t*/\n    font-size: 1.2em;\n    position: absolute;\n    right: 0.2em;\n    bottom: 0.2em;\n    opacity: 0.7; }\n    .preview .remove[_v-fe52bb5e]:hover {\n      opacity: 1.0;\n      cursor: pointer; }\n", ""]);
+	exports.push([module.id, ".wrapper[_v-757319fa], input[_v-757319fa] {\n  width: 100%; }\n\n.preview[_v-757319fa] {\n  position: relative;\n  margin-top: 5px;\n  height: 100px;\n  background-repeat: no-repeat;\n  background-size: contain;\n  background-position: center center;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }\n  .preview .remove[_v-757319fa] {\n    /*background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAXUlEQVR42u2SwQoAIAhD88vVLy8KBlaS0i1oJwP3piGVg0Skmpq8HjqZrWl9uwCbGAmwKYGZs/6iqgMyAdJuM8W2QmYKpLt/0AG9ASCv/oAnANd3AEjmAlFT1BypAV+PnRH5YehvAAAAAElFTkSuQmCC');\n\t\twidth: 16px;\n\t\theight: 16px;\n\t\t*/\n    font-size: 1.2em;\n    position: absolute;\n    right: 0.2em;\n    bottom: 0.2em;\n    opacity: 0.7; }\n    .preview .remove[_v-757319fa]:hover {\n      opacity: 1.0;\n      cursor: pointer; }\n", ""]);
 
 	// exports
 
@@ -41219,7 +41219,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 143 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"wrapper\" _v-fe52bb5e=\"\"><input type=\"text\" v-model=\"wrappedValue\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control link\" _v-fe52bb5e=\"\"><input type=\"file\" :readonly=\"schema.readonly\" :disabled=\"disabled\" v-if=\"schema.browse !== false\" @change=\"fileChanged\" class=\"form-control file\" _v-fe52bb5e=\"\"><div :style=\"previewStyle\" class=\"preview\" _v-fe52bb5e=\"\"><div title=\"Remove image\" @click=\"remove\" class=\"remove fa fa-trash-o\" _v-fe52bb5e=\"\"></div></div></div>";
+	module.exports = "<div class=\"wrapper\" _v-757319fa=\"\"><input type=\"text\" v-model=\"wrappedValue\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control link\" _v-757319fa=\"\"><input type=\"file\" :readonly=\"schema.readonly\" :disabled=\"disabled\" v-if=\"schema.browse !== false\" @change=\"fileChanged\" class=\"form-control file\" _v-757319fa=\"\"><div :style=\"previewStyle\" class=\"preview\" _v-757319fa=\"\"><div title=\"Remove image\" @click=\"remove\" class=\"remove fa fa-trash-o\" _v-757319fa=\"\"></div></div></div>";
 
 /***/ },
 /* 144 */
@@ -41231,7 +41231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldLabel.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldLabel.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(148)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41266,8 +41266,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-de15f92c&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldLabel.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-de15f92c&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldLabel.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f4dd09da&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldLabel.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f4dd09da&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldLabel.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41285,7 +41285,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "span[_v-de15f92c] {\n  display: block;\n  width: 100%;\n  margin-left: 12px; }\n", ""]);
+	exports.push([module.id, "span[_v-f4dd09da] {\n  display: block;\n  width: 100%;\n  margin-left: 12px; }\n", ""]);
 
 	// exports
 
@@ -41296,7 +41296,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 148 */
 /***/ function(module, exports) {
 
-	module.exports = "<span _v-de15f92c=\"\">{{ value }}</span>";
+	module.exports = "<span _v-f4dd09da=\"\">{{ value }}</span>";
 
 /***/ },
 /* 149 */
@@ -41308,7 +41308,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldMasked.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldMasked.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(153)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41343,8 +41343,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c796e4f6&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldMasked.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c796e4f6&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldMasked.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3b270afc&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldMasked.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3b270afc&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldMasked.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41362,7 +41362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "input[_v-c796e4f6] {\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "input[_v-3b270afc] {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -41395,7 +41395,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 153 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"text\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-c796e4f6=\"\">";
+	module.exports = "<input type=\"text\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-3b270afc=\"\">";
 
 /***/ },
 /* 154 */
@@ -41407,7 +41407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldNumber.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldNumber.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(158)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41442,8 +41442,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-49865d7a&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldNumber.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-49865d7a&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldNumber.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7a2f4eba&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldNumber.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7a2f4eba&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldNumber.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41461,7 +41461,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "input[_v-49865d7a] {\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "input[_v-7a2f4eba] {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -41472,7 +41472,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 158 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"number\" v-model=\"value\" number=\"number\" :min=\"schema.min\" :max=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-49865d7a=\"\">";
+	module.exports = "<input type=\"number\" v-model=\"value\" number=\"number\" :min=\"schema.min\" :max=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-7a2f4eba=\"\">";
 
 /***/ },
 /* 159 */
@@ -41484,7 +41484,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldPassword.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldPassword.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(163)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41519,8 +41519,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-21254715&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldPassword.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-21254715&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldPassword.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-65237a68&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldPassword.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-65237a68&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldPassword.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41538,7 +41538,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "input[_v-21254715] {\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "input[_v-65237a68] {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -41549,7 +41549,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 163 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"password\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-21254715=\"\">";
+	module.exports = "<input type=\"password\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-65237a68=\"\">";
 
 /***/ },
 /* 164 */
@@ -41561,7 +41561,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldRange.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldRange.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(168)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41596,8 +41596,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ef3d1d9a&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldRange.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ef3d1d9a&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldRange.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7cfde8dc&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldRange.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7cfde8dc&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldRange.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41615,7 +41615,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "input[_v-ef3d1d9a] {\n  width: 100%; }\n\n.helpText[_v-ef3d1d9a] {\n  margin: auto 0.5em; }\n", ""]);
+	exports.push([module.id, "input[_v-7cfde8dc] {\n  width: 100%; }\n\n.helpText[_v-7cfde8dc] {\n  margin: auto 0.5em; }\n", ""]);
 
 	// exports
 
@@ -41626,7 +41626,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 168 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"range\" v-model=\"value\" :min=\"schema.min\" :max=\"schema.max\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-ef3d1d9a=\"\"><div class=\"helpText\" _v-ef3d1d9a=\"\">{{ value }}</div>";
+	module.exports = "<input type=\"range\" v-model=\"value\" :min=\"schema.min\" :max=\"schema.max\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-7cfde8dc=\"\"><div class=\"helpText\" _v-7cfde8dc=\"\">{{ value }}</div>";
 
 /***/ },
 /* 169 */
@@ -41638,7 +41638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldSelect.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldSelect.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(173)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41673,8 +41673,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e02dcd14&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSelect.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e02dcd14&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSelect.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2edb96ed&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSelect.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2edb96ed&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSelect.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41692,7 +41692,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "select[_v-e02dcd14] {\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "select[_v-2edb96ed] {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -41729,7 +41729,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 		methods: {
 			getItemID: function getItemID(item) {
-				if ((0, _lodash.isObject)(item) && item.id) return item.id;
+				if ((0, _lodash.isObject)(item) && !(0, _lodash.isNil)(item.id)) return item.id;
 
 				return item;
 			},
@@ -41745,7 +41745,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 173 */
 /***/ function(module, exports) {
 
-	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" class=\"form-control\" _v-e02dcd14=\"\"><option :disabled=\"schema.required\" :value=\"null\" :selected=\"value == undefined\" _v-e02dcd14=\"\">&lt;Not selected&gt;</option><option v-for=\"item in items\" :value=\"getItemID(item)\" _v-e02dcd14=\"\">{{ getItemName(item) }}</option></select>";
+	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" class=\"form-control\" _v-2edb96ed=\"\"><option :disabled=\"schema.required\" :value=\"null\" :selected=\"value == undefined\" _v-2edb96ed=\"\">&lt;Not selected&gt;</option><option v-for=\"item in items\" :value=\"getItemID(item)\" _v-2edb96ed=\"\">{{ getItemName(item) }}</option></select>";
 
 /***/ },
 /* 174 */
@@ -41757,7 +41757,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldSelectEx.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldSelectEx.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(178)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -41886,7 +41886,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldSlider.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldSlider.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(240)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -42579,6 +42579,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // Thrash, waste and sodomy: IE GC bug
 	  var iframe = __webpack_require__(209)('iframe')
 	    , i      = enumBugKeys.length
+	    , lt     = '<'
 	    , gt     = '>'
 	    , iframeDocument;
 	  iframe.style.display = 'none';
@@ -42588,7 +42589,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // html.removeChild(iframe);
 	  iframeDocument = iframe.contentWindow.document;
 	  iframeDocument.open();
-	  iframeDocument.write('<script>document.F=Object</script' + gt);
+	  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
 	  iframeDocument.close();
 	  createDict = iframeDocument.F;
 	  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
@@ -42606,6 +42607,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  } else result = createDict();
 	  return Properties === undefined ? result : dPs(result, Properties);
 	};
+
 
 /***/ },
 /* 216 */
@@ -42962,7 +42964,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldSpectrum.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldSpectrum.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(245)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -42997,8 +42999,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-83fbcd6a&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSpectrum.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-83fbcd6a&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSpectrum.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6a4b1502&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSpectrum.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6a4b1502&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSpectrum.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -43070,7 +43072,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 245 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"text\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-83fbcd6a=\"\">";
+	module.exports = "<input type=\"text\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-6a4b1502=\"\">";
 
 /***/ },
 /* 246 */
@@ -43082,7 +43084,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldStaticMap.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldStaticMap.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(250)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -43117,8 +43119,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3c40e884&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldStaticMap.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3c40e884&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldStaticMap.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-191763ad&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldStaticMap.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-191763ad&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldStaticMap.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -43136,7 +43138,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "img[_v-3c40e884] {\n  display: block;\n  width: auto;\n  max-width: 100%; }\n", ""]);
+	exports.push([module.id, "img[_v-191763ad] {\n  display: block;\n  width: auto;\n  max-width: 100%; }\n", ""]);
 
 	// exports
 
@@ -43171,7 +43173,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 250 */
 /***/ function(module, exports) {
 
-	module.exports = "<img :src=\"mapLink\" _v-3c40e884=\"\">";
+	module.exports = "<img :src=\"mapLink\" _v-191763ad=\"\">";
 
 /***/ },
 /* 251 */
@@ -43183,7 +43185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldSwitch.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldSwitch.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(255)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -43218,8 +43220,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-442c80a4&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSwitch.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-442c80a4&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSwitch.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7cdc3d25&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSwitch.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7cdc3d25&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldSwitch.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -43237,7 +43239,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "label[_v-442c80a4] {\n  position: relative;\n  display: block;\n  vertical-align: top;\n  width: 120px;\n  height: 30px;\n  padding: 3px;\n  margin: 0 10px 10px 0;\n  background: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);\n  background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);\n  background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);\n  border-radius: 18px;\n  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  cursor: pointer; }\n\ninput[_v-442c80a4] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  opacity: 0; }\n\n.label[_v-442c80a4] {\n  position: relative;\n  display: block;\n  height: inherit;\n  font-size: 10px;\n  text-transform: uppercase;\n  background: #eceeef;\n  border-radius: inherit;\n  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15); }\n\n.label[_v-442c80a4]:before, .label[_v-442c80a4]:after {\n  position: absolute;\n  top: 50%;\n  margin-top: -.5em;\n  line-height: 1;\n  -webkit-transition: inherit;\n  transition: inherit; }\n\n.label[_v-442c80a4]:before {\n  content: attr(data-off);\n  right: 11px;\n  color: #aaaaaa;\n  text-shadow: 0 1px rgba(255, 255, 255, 0.5); }\n\n.label[_v-442c80a4]:after {\n  content: attr(data-on);\n  left: 11px;\n  color: #FFFFFF;\n  text-shadow: 0 1px rgba(0, 0, 0, 0.2);\n  opacity: 0; }\n\ninput:checked ~ .label[_v-442c80a4] {\n  background: #E1B42B;\n  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2); }\n\ninput:checked ~ .label[_v-442c80a4]:before {\n  opacity: 0; }\n\ninput:checked ~ .label[_v-442c80a4]:after {\n  opacity: 1; }\n\n.handle[_v-442c80a4] {\n  position: absolute;\n  top: 4px;\n  left: 4px;\n  width: 28px;\n  height: 28px;\n  background: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);\n  background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);\n  background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);\n  border-radius: 100%;\n  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); }\n\n.handle[_v-442c80a4]:before {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin: -6px 0 0 -6px;\n  width: 12px;\n  height: 12px;\n  background: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);\n  background: linear-gradient(to bottom, #eeeeee, #FFFFFF);\n  background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);\n  border-radius: 6px;\n  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02); }\n\ninput:checked ~ .handle[_v-442c80a4] {\n  left: 94px;\n  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2); }\n\n/* Transition\n========================== */\n.label[_v-442c80a4], .handle[_v-442c80a4] {\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease; }\n", ""]);
+	exports.push([module.id, "label[_v-7cdc3d25] {\n  position: relative;\n  display: block;\n  vertical-align: top;\n  width: 120px;\n  height: 30px;\n  padding: 3px;\n  margin: 0 10px 10px 0;\n  background: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);\n  background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);\n  background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);\n  border-radius: 18px;\n  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  cursor: pointer; }\n\ninput[_v-7cdc3d25] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  opacity: 0; }\n\n.label[_v-7cdc3d25] {\n  position: relative;\n  display: block;\n  height: inherit;\n  font-size: 10px;\n  text-transform: uppercase;\n  background: #eceeef;\n  border-radius: inherit;\n  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15); }\n\n.label[_v-7cdc3d25]:before, .label[_v-7cdc3d25]:after {\n  position: absolute;\n  top: 50%;\n  margin-top: -.5em;\n  line-height: 1;\n  -webkit-transition: inherit;\n  transition: inherit; }\n\n.label[_v-7cdc3d25]:before {\n  content: attr(data-off);\n  right: 11px;\n  color: #aaaaaa;\n  text-shadow: 0 1px rgba(255, 255, 255, 0.5); }\n\n.label[_v-7cdc3d25]:after {\n  content: attr(data-on);\n  left: 11px;\n  color: #FFFFFF;\n  text-shadow: 0 1px rgba(0, 0, 0, 0.2);\n  opacity: 0; }\n\ninput:checked ~ .label[_v-7cdc3d25] {\n  background: #E1B42B;\n  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2); }\n\ninput:checked ~ .label[_v-7cdc3d25]:before {\n  opacity: 0; }\n\ninput:checked ~ .label[_v-7cdc3d25]:after {\n  opacity: 1; }\n\n.handle[_v-7cdc3d25] {\n  position: absolute;\n  top: 4px;\n  left: 4px;\n  width: 28px;\n  height: 28px;\n  background: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);\n  background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);\n  background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);\n  border-radius: 100%;\n  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); }\n\n.handle[_v-7cdc3d25]:before {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin: -6px 0 0 -6px;\n  width: 12px;\n  height: 12px;\n  background: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);\n  background: linear-gradient(to bottom, #eeeeee, #FFFFFF);\n  background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);\n  border-radius: 6px;\n  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02); }\n\ninput:checked ~ .handle[_v-7cdc3d25] {\n  left: 94px;\n  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2); }\n\n/* Transition\n========================== */\n.label[_v-7cdc3d25], .handle[_v-7cdc3d25] {\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease; }\n", ""]);
 
 	// exports
 
@@ -43281,7 +43283,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 255 */
 /***/ function(module, exports) {
 
-	module.exports = "<label _v-442c80a4=\"\"><input type=\"checkbox\" v-model=\"value\" :disabled=\"disabled\" _v-442c80a4=\"\"><span :data-on=\"schema.textOn || 'On'\" :data-off=\"schema.textOff || 'Off'\" class=\"label\" _v-442c80a4=\"\"></span><span class=\"handle\" _v-442c80a4=\"\"></span></label>";
+	module.exports = "<label _v-7cdc3d25=\"\"><input type=\"checkbox\" v-model=\"value\" :disabled=\"disabled\" _v-7cdc3d25=\"\"><span :data-on=\"schema.textOn || 'On'\" :data-off=\"schema.textOff || 'Off'\" class=\"label\" _v-7cdc3d25=\"\"></span><span class=\"handle\" _v-7cdc3d25=\"\"></span></label>";
 
 /***/ },
 /* 256 */
@@ -43293,7 +43295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldText.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldText.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(260)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -43328,8 +43330,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8d1d8cb2&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldText.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8d1d8cb2&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldText.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7702a8de&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldText.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7702a8de&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldText.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -43347,7 +43349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "input[_v-8d1d8cb2] {\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "input[_v-7702a8de] {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -43358,7 +43360,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 260 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-8d1d8cb2=\"\">";
+	module.exports = "<input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-7702a8de=\"\">";
 
 /***/ },
 /* 261 */
@@ -43370,7 +43372,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src\\fields\\fieldTextArea.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/fields/fieldTextArea.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(265)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -43405,8 +43407,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e7e77f58&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldTextArea.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e7e77f58&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldTextArea.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-38553c0b&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldTextArea.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-38553c0b&scoped=true!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./fieldTextArea.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -43424,7 +43426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "textarea[_v-e7e77f58] {\n  width: 100%; }\n", ""]);
+	exports.push([module.id, "textarea[_v-38553c0b] {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -43435,7 +43437,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 265 */
 /***/ function(module, exports) {
 
-	module.exports = "<textarea v-model=\"value\" :rows=\"schema.rows || 2\" :readonly=\"schema.readonly\" :placeholder=\"schema.placeholder\" :disabled=\"disabled\" :maxlength=\"schema.max\" class=\"form-control\" _v-e7e77f58=\"\"></textarea>";
+	module.exports = "<textarea v-model=\"value\" :rows=\"schema.rows || 2\" :readonly=\"schema.readonly\" :placeholder=\"schema.placeholder\" :disabled=\"disabled\" :maxlength=\"schema.max\" class=\"form-control\" _v-38553c0b=\"\"></textarea>";
 
 /***/ },
 /* 266 */
