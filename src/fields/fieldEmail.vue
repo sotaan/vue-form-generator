@@ -1,5 +1,7 @@
 <template lang="jade">
-	input.form-control(type="email", v-model="value", :readonly="schema.readonly", :disabled="disabled", :placeholder="schema.placeholder")
+.material-textfield.grey
+	input(type="email", v-model="value", :readonly="schema.readonly", :disabled="disabled", :placeholder="schema.placeholder")
+	label(data-content="{{field.label}}") {{ field.label }}
 </template>
 
 <script>

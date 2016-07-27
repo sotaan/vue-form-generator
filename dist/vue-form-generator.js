@@ -507,6 +507,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 		methods: {
+			isClassicLabel: function isClassicLabel(field) {
+				if (field.type === "text" || field.type === "email") return false;
+				return true;
+			},
 			getFieldWrapClasses: function getFieldWrapClasses(field) {
 				if (field.type === "select") return { 'field-wrap': true };else return { 'field-wrap': false };
 			},
@@ -41076,7 +41080,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 138 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"email\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-282db3bb=\"\">";
+	module.exports = "<div class=\"material-textfield grey\" _v-282db3bb=\"\"><input type=\"email\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-282db3bb=\"\"><label data-content=\"{{field.label}}\" _v-282db3bb=\"\">{{ field.label }}</label></div>";
 
 /***/ },
 /* 139 */
@@ -43363,7 +43367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 260 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"material-textfield grey\" _v-7702a8de=\"\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-7702a8de=\"\"></div>";
+	module.exports = "<div class=\"material-textfield grey\" _v-7702a8de=\"\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-7702a8de=\"\"><label data-content=\"{{field.label}}\" _v-7702a8de=\"\">{{ field.label }}</label></div>";
 
 /***/ },
 /* 261 */
@@ -43446,7 +43450,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 266 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<fieldset v-if=\"schema != null\">\n\t<div class=\"col-md-6 col-sm-6 col-xs-12\">\n\t\t<div v-for=\"field in fields\" v-if=\"fieldVisible(field)\" :class=\"getFieldRowClasses(field)\" class=\"form-group\"><span v-if=\"field.help\" class=\"help\"><i class=\"fa fa-question-circle\"></i>\n\t      <div class=\"helpText\">{{{field.help}}}</div></span>\n\t    <div :class=\"getFieldWrapClasses(field)\">\n\t      <component :is=\"getFieldType(field)\" :disabled=\"fieldDisabled(field)\" :model.sync=\"model\" :schema.sync=\"field\"></component>\n\t      <label data-content=\"{{field.label}}\">{{ field.label }}</label>\n\t      <div v-if=\"field.buttons &amp;&amp; field.buttons.length &gt; 0\" class=\"buttons\">\n\t        <button v-for=\"btn in field.buttons\" @click=\"btn.onclick(model, field)\" :class=\"btn.classes\" class=\"btn btn-default\">{{ btn.label }}</button>\n\t      </div>\n\t    </div>\n\t    <div v-if=\"field.hint\" class=\"hint\">{{ field.hint }}</div>\n\t    <div v-if=\"field.errors &amp;&amp; field.errors.length &gt; 0\" class=\"errors\"><span v-for=\"error in field.errors\" track-by=\"$index\">{{ error }}</span></div>\n\t  </div>\n\t</div>\n</fieldset>\n";
+	module.exports = "\n<fieldset v-if=\"schema != null\">\n\t<div class=\"col-md-6 col-sm-6 col-xs-12\">\n\t\t<div v-for=\"field in fields\" v-if=\"fieldVisible(field)\" :class=\"getFieldRowClasses(field)\" class=\"form-group\"><span v-if=\"field.help\" class=\"help\"><i class=\"fa fa-question-circle\"></i>\n\t      <div class=\"helpText\">{{{field.help}}}</div></span>\n\t    <div :class=\"getFieldWrapClasses(field)\">\n\t      <component :is=\"getFieldType(field)\" :disabled=\"fieldDisabled(field)\" :model.sync=\"model\" :schema.sync=\"field\"></component>\n\t      <label v-if=\"isClassicLabel(field)\" data-content=\"{{field.label}}\">{{ field.label }}</label>\n\t      <div v-if=\"field.buttons &amp;&amp; field.buttons.length &gt; 0\" class=\"buttons\">\n\t        <button v-for=\"btn in field.buttons\" @click=\"btn.onclick(model, field)\" :class=\"btn.classes\" class=\"btn btn-default\">{{ btn.label }}</button>\n\t      </div>\n\t    </div>\n\t    <div v-if=\"field.hint\" class=\"hint\">{{ field.hint }}</div>\n\t    <div v-if=\"field.errors &amp;&amp; field.errors.length &gt; 0\" class=\"errors\"><span v-for=\"error in field.errors\" track-by=\"$index\">{{ error }}</span></div>\n\t  </div>\n\t</div>\n</fieldset>\n";
 
 /***/ },
 /* 267 */
