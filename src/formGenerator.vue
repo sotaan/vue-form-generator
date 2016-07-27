@@ -1,17 +1,18 @@
-<template lang="jade">
-fieldset(v-if="schema != null")
-	.form-group(v-for="field in fields", v-if="fieldVisible(field)", :class="getFieldRowClasses(field)")
-		span.help(v-if="field.help")
-			i.fa.fa-question-circle
-			.helpText {{{field.help}}}
-		.field-wrap
-			component(:is="getFieldType(field)", :disabled="fieldDisabled(field)", :model.sync="model", :schema.sync="field")
-			label(data-content!="{{field.label}}") {{ field.label }}
-			.buttons(v-if="field.buttons && field.buttons.length > 0")
-				button.btn.btn-default(v-for="btn in field.buttons", @click="btn.onclick(model, field)", :class="btn.classes") {{ btn.label }}
-		.hint(v-if="field.hint") {{ field.hint }}
-		.errors(v-if="field.errors && field.errors.length > 0")
-			span(v-for="error in field.errors", track-by="$index") {{ error }}
+<template>
+	<fieldset v-if="schema != null">
+	  <div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"><span v-if="field.help" class="help"><i class="fa fa-question-circle"></i>
+	      <div class="helpText">{{{field.help}}}</div></span>
+	    <div class="field-wrap">
+	      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
+	      <label data-content="{{field.label}}">{{ field.label }}</label>
+	      <div v-if="field.buttons &amp;&amp; field.buttons.length &gt; 0" class="buttons">
+	        <button v-for="btn in field.buttons" @click="btn.onclick(model, field)" :class="btn.classes" class="btn btn-default">{{ btn.label }}</button>
+	      </div>
+	    </div>
+	    <div v-if="field.hint" class="hint">{{ field.hint }}</div>
+	    <div v-if="field.errors &amp;&amp; field.errors.length &gt; 0" class="errors"><span v-for="error in field.errors" track-by="$index">{{ error }}</span></div>
+	  </div>
+	</fieldset>
 </template>
 
 <script>
