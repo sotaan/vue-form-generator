@@ -101,13 +101,13 @@
 					baseClasses[field.styleClasses] = true;
 				}
 
-				if (field.type === "select") {
-					baseClasses["how"] = true;
-				}
-				else {
-					baseClasses["material-textfield"] = true;
-					baseClasses["grey"] = true;
-				}
+				// if (field.type === "select") {
+				// 	baseClasses["how"] = true;
+				// }
+				// else {
+				// 	baseClasses["material-textfield"] = true;
+				// 	baseClasses["grey"] = true;
+				// }
 
 				baseClasses["field-" + field.type] = true;
 

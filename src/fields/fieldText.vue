@@ -1,5 +1,6 @@
 <template lang="jade">
-	input.form-control(type="text", v-model="value", :maxlength="schema.max", :readonly="schema.readonly", :disabled="disabled", :placeholder="schema.placeholder")
+.material-textfield.grey
+  input(type="text", v-model="value", :maxlength="schema.max", :readonly="schema.readonly", :disabled="disabled", :placeholder="schema.placeholder")
 </template>
 
 <script>
@@ -8,7 +9,7 @@
 	export default {
 		mixins: [ abstractField ]
 	};
-	
+
 </script>
 
 <style lang="sass" scoped>

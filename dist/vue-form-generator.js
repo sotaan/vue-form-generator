@@ -524,13 +524,6 @@ return /******/ (function(modules) { // webpackBootstrap
 					baseClasses[field.styleClasses] = true;
 				}
 
-				if (field.type === "select") {
-					baseClasses["how"] = true;
-				} else {
-					baseClasses["material-textfield"] = true;
-					baseClasses["grey"] = true;
-				}
-
 				baseClasses["field-" + field.type] = true;
 
 				return baseClasses;
@@ -41752,7 +41745,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 173 */
 /***/ function(module, exports) {
 
-	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" class=\"form-control\" _v-2edb96ed=\"\"><option :disabled=\"schema.required\" :value=\"null\" :selected=\"value == undefined\" _v-2edb96ed=\"\">&lt;Not selected&gt;</option><option v-for=\"item in items\" :value=\"getItemID(item)\" _v-2edb96ed=\"\">{{ getItemName(item) }}</option></select>";
+	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" class=\"form-control how\" _v-2edb96ed=\"\"><option :disabled=\"schema.required\" :value=\"null\" :selected=\"value == undefined\" _v-2edb96ed=\"\">&lt;Not selected&gt;</option><option v-for=\"item in items\" :value=\"getItemID(item)\" _v-2edb96ed=\"\">{{ getItemName(item) }}</option></select>";
 
 /***/ },
 /* 174 */
@@ -43367,7 +43360,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 260 */
 /***/ function(module, exports) {
 
-	module.exports = "<input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"form-control\" _v-7702a8de=\"\">";
+	module.exports = "<div class=\"material-textfield grey\" _v-7702a8de=\"\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-7702a8de=\"\"></div>";
 
 /***/ },
 /* 261 */
