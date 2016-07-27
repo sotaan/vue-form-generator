@@ -1,17 +1,19 @@
 <template>
 	<fieldset v-if="schema != null">
-	  <div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"><span v-if="field.help" class="help"><i class="fa fa-question-circle"></i>
-	      <div class="helpText">{{{field.help}}}</div></span>
-	    <div class="field-wrap">
-	      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
-	      <label data-content="{{field.label}}">{{ field.label }}</label>
-	      <div v-if="field.buttons &amp;&amp; field.buttons.length &gt; 0" class="buttons">
-	        <button v-for="btn in field.buttons" @click="btn.onclick(model, field)" :class="btn.classes" class="btn btn-default">{{ btn.label }}</button>
-	      </div>
-	    </div>
-	    <div v-if="field.hint" class="hint">{{ field.hint }}</div>
-	    <div v-if="field.errors &amp;&amp; field.errors.length &gt; 0" class="errors"><span v-for="error in field.errors" track-by="$index">{{ error }}</span></div>
-	  </div>
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"><span v-if="field.help" class="help"><i class="fa fa-question-circle"></i>
+		      <div class="helpText">{{{field.help}}}</div></span>
+		    <div class="field-wrap">
+		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
+		      <label data-content="{{field.label}}">{{ field.label }}</label>
+		      <div v-if="field.buttons &amp;&amp; field.buttons.length &gt; 0" class="buttons">
+		        <button v-for="btn in field.buttons" @click="btn.onclick(model, field)" :class="btn.classes" class="btn btn-default">{{ btn.label }}</button>
+		      </div>
+		    </div>
+		    <div v-if="field.hint" class="hint">{{ field.hint }}</div>
+		    <div v-if="field.errors &amp;&amp; field.errors.length &gt; 0" class="errors"><span v-for="error in field.errors" track-by="$index">{{ error }}</span></div>
+		  </div>
+		</div>
 	</fieldset>
 </template>
 
