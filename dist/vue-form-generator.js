@@ -159,7 +159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "fieldset input, fieldset select, fieldset textarea {\n  border-radius: 4px;\n  border: 1px solid #BBB;\n  padding: 2px 5px; }\n\nfieldset span.help {\n  margin-left: 0.3em;\n  position: relative;\n  /* This bridges the gap so you can mouse into the tooltip without it disappearing */\n  /* CSS Triangles - see Trevor's post */\n  /*.helpText:after {\n\t\t\tborder-left: solid transparent 10px;\n\t\t\tborder-right: solid transparent 10px;\n\t\t\tborder-top: solid #1496bb 10px;\n\t\t\tbottom: -10px;\n\t\t\tcontent: \" \";\n\t\t\theight: 0;\n\t\t\tleft: 50%;\n\t\t\tmargin-left: -13px;\n\t\t\tposition: absolute;\n\t\t\twidth: 0;\n\t\t}*/ }\n  fieldset span.help .helpText {\n    background-color: #444;\n    bottom: 30px;\n    color: #fff;\n    display: block;\n    left: 0px;\n    opacity: 0;\n    padding: 20px;\n    pointer-events: none;\n    position: absolute;\n    text-align: justify;\n    width: 300px;\n    -webkit-transition: all .25s ease-out;\n    transition: all .25s ease-out;\n    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);\n    border-radius: 6px; }\n    fieldset span.help .helpText a {\n      font-weight: bold;\n      text-decoration: underline; }\n  fieldset span.help .helpText:before {\n    bottom: -20px;\n    content: \" \";\n    display: block;\n    height: 20px;\n    left: 0;\n    position: absolute;\n    width: 100%; }\n  fieldset span.help:hover .helpText {\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0px);\n            transform: translateY(0px); }\n\nfieldset .field-wrap {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  fieldset .field-wrap .buttons {\n    white-space: nowrap; }\n    fieldset .field-wrap .buttons button {\n      display: inline-block;\n      margin: 0 2px; }\n\nfieldset .hint {\n  font-style: italic;\n  font-size: 0.8em; }\n\nfieldset .form-group {\n  display: inline-block;\n  vertical-align: top;\n  width: 100%;\n  margin-bottom: 1rem; }\n  fieldset .form-group label {\n    font-weight: 400; }\n  fieldset .form-group.featured label {\n    font-weight: bold; }\n  fieldset .form-group.required label:after {\n    content: \"*\";\n    font-weight: normal;\n    color: Red;\n    /*position: absolute;*/\n    padding-left: 0.2em;\n    font-size: 1em; }\n  fieldset .form-group.disabled label {\n    color: #666;\n    font-style: italic; }\n  fieldset .form-group.error input:not([type=\"checkbox\"]), fieldset .form-group.error textarea, fieldset .form-group.error select {\n    border: 1px solid red;\n    background-color: rgba(255, 0, 0, 0.15); }\n  fieldset .form-group.error .errors {\n    color: red;\n    font-size: 0.80em; }\n    fieldset .form-group.error .errors span {\n      display: block;\n      background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAiklEQVR4Xt2TMQoCQQxF3xdhu72MpZU3GU/meBFLOztPYrVWsQmEWSaMsIXgK8P8RyYkMjO2sAN+K9gTIAmDAlzoUzE7p4IFytvDCQWJKSStYB2efcAvqZFM0BcstMx5naSDYFzfLhh/4SmRM+6Agw/xIX0tKEDFufeDNRUc4XqLRz3qabVIf3BMHwl6Ktexn3nmAAAAAElFTkSuQmCC\");\n      background-repeat: no-repeat;\n      padding-left: 17px;\n      padding-top: 0px;\n      margin-top: 0.2em;\n      font-weight: 600; }\n", ""]);
+	exports.push([module.id, "", ""]);
 
 	// exports
 
@@ -522,6 +522,13 @@ return /******/ (function(modules) { // webpackBootstrap
 					});
 				} else if ((0, _lodash.isString)(field.styleClasses)) {
 					baseClasses[field.styleClasses] = true;
+				}
+
+				if (field.type === "select") {
+					baseClasses["how"] = true;
+				} else {
+					baseClasses["material-textfield"] = true;
+					baseClasses["grey"] = true;
 				}
 
 				baseClasses["field-" + field.type] = true;
@@ -43443,7 +43450,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 266 */
 /***/ function(module, exports) {
 
-	module.exports = "<fieldset v-if=\"schema != null\"><div v-for=\"field in fields\" v-if=\"fieldVisible(field)\" :class=\"getFieldRowClasses(field)\" class=\"form-group\"><label>{{ field.label }}<span v-if=\"field.help\" class=\"help\"><i class=\"fa fa-question-circle\"></i><div class=\"helpText\">{{{field.help}}}</div></span></label><div class=\"field-wrap\"><component :is=\"getFieldType(field)\" :disabled=\"fieldDisabled(field)\" :model.sync=\"model\" :schema.sync=\"field\"></component><div v-if=\"field.buttons &amp;&amp; field.buttons.length &gt; 0\" class=\"buttons\"><button v-for=\"btn in field.buttons\" @click=\"btn.onclick(model, field)\" :class=\"btn.classes\" class=\"btn btn-default\">{{ btn.label }}</button></div></div><div v-if=\"field.hint\" class=\"hint\">{{ field.hint }}</div><div v-if=\"field.errors &amp;&amp; field.errors.length &gt; 0\" class=\"errors\"><span v-for=\"error in field.errors\" track-by=\"$index\">{{ error }}</span></div></div></fieldset>";
+	module.exports = "<fieldset v-if=\"schema != null\"><div v-for=\"field in fields\" v-if=\"fieldVisible(field)\" :class=\"getFieldRowClasses(field)\" class=\"form-group\"><span v-if=\"field.help\" class=\"help\"><i class=\"fa fa-question-circle\"></i><div class=\"helpText\">{{{field.help}}}</div></span></div><div class=\"field-wrap\"><component :is=\"getFieldType(field)\" :disabled=\"fieldDisabled(field)\" :model.sync=\"model\" :schema.sync=\"field\"></component><label data-content=\"{{field.label}}\">{{ field.label }}</label><div v-if=\"field.buttons &amp;&amp; field.buttons.length &gt; 0\" class=\"buttons\"><button v-for=\"btn in field.buttons\" @click=\"btn.onclick(model, field)\" :class=\"btn.classes\" class=\"btn btn-default\">{{ btn.label }}</button></div></div><div v-if=\"field.hint\" class=\"hint\">{{ field.hint }}<div v-if=\"field.errors &amp;&amp; field.errors.length &gt; 0\" class=\"errors\"><span v-for=\"error in field.errors\" track-by=\"$index\">{{ error }}</span></div></div></fieldset>";
 
 /***/ },
 /* 267 */
