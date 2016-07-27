@@ -41080,7 +41080,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 138 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"material-textfield grey\" _v-282db3bb=\"\"><input type=\"email\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-282db3bb=\"\"><label data-content=\"{{field.label}}\" _v-282db3bb=\"\">{{ field.label }}</label></div>";
+	module.exports = "<div class=\"material-textfield grey\" _v-282db3bb=\"\"><input type=\"email\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-282db3bb=\"\"><label data-content=\"{{schema.label}}\" _v-282db3bb=\"\">{{ schema.label }}</label></div>";
 
 /***/ },
 /* 139 */
@@ -43367,7 +43367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 260 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"material-textfield grey\" _v-7702a8de=\"\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-7702a8de=\"\"><label data-content=\"{{field.label}}\" _v-7702a8de=\"\">{{ field.label }}</label></div>";
+	module.exports = "<div class=\"material-textfield grey\" _v-7702a8de=\"\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-7702a8de=\"\"><label data-content=\"{{schema.label}}\" _v-7702a8de=\"\">{{ schema.label }}</label></div>";
 
 /***/ },
 /* 261 */
