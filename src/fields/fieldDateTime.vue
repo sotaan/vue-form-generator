@@ -17,7 +17,7 @@
 		methods: {
 
 			getDateFormat() {
-				if (this.schema.dateTimePickerOptions && this.schema.dateTimePickerOptions.format) 
+				if (this.schema.dateTimePickerOptions && this.schema.dateTimePickerOptions.format)
 					return this.schema.dateTimePickerOptions.format;
 				else
 					return inputFormat;
@@ -45,18 +45,11 @@
 		},
 
 		ready() {
-			if ($.fn.datetimepicker) 
+			if ($.fn.datetimepicker)
 				$(this.$el).datetimepicker(this.schema.dateTimePickerOptions);
 			else
 				console.warn("Bootstrap datetimepicker library is missing. Please download from https://eonasdan.github.io/bootstrap-datetimepicker/ and load the script and CSS in the HTML head section!");
 
-		}		
+		}
 	};
 </script>
-
-
-<style lang="sass" scoped>
-	input {
-		width: 100%;
-	}
-</style>
