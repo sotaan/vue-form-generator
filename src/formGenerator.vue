@@ -3,7 +3,7 @@
 		<div class="col-md-6 col-sm-6 col-xs-12">
 			<div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"><span v-if="field.help" class="help"><i class="fa fa-question-circle"></i>
 		      <div class="helpText">{{{field.help}}}</div></span>
-		    <div class="field-wrap">
+		    <div :class="getFieldWrapClasses(field)">
 		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
 		      <label data-content="{{field.label}}">{{ field.label }}</label>
 		      <div v-if="field.buttons &amp;&amp; field.buttons.length &gt; 0" class="buttons">
@@ -85,6 +85,12 @@
 		},
 
 		methods: {
+			getFieldWrapClasses (field) {
+				if (field.type === "select")
+					return { 'field-wrap': true };
+				else
+					return { 'field-wrap': false };
+			},
 			getFieldRowClasses(field) {
 				let baseClasses = {
 					error: field.errors && field.errors.length > 0,
