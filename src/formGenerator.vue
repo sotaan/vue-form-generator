@@ -331,4 +331,83 @@
 	// 	} // .form-group
 	//
 	// } // fieldset
+	/* ////// ANDROID FORM \\\\\\ */
+
+.material-textfield {
+    display: inline-block;
+    height: 45px;
+    margin: 0 auto 5px;
+    border: 2px solid #f2f2f2;
+    border-radius: 25px;
+    -webkit-transition: border .2s ease-in;
+    transition: border .2s ease-in;
+}
+.material-textfield input {
+    font-size: 16px;
+    display: block;
+    min-width: 290px !important;
+    padding: 13px 25px 0;
+    color: #6b6b6b !important;
+    border: 0 !important;
+    background: none !important;
+}
+.material-textfield input:invalid {
+    box-shadow: none;
+}
+input:focus {
+    outline: none;
+}
+.border-focus {
+    border-radius: 25px;
+    box-shadow: 0 0 7px 1px rgba(13, 134, 200, 0.6);
+}
+.material-textfield label {
+    font-size: 0;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+    margin-left: 25px;
+    pointer-events: none;
+}
+.material-textfield label::before {
+    position: relative;
+    content: attr(data-content);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    will-change: font-size, top;
+}
+.material-textfield label::after {
+    position: absolute;
+    bottom: .9rem;
+    left: 50%;
+    width: 0;
+    height: .4rem;
+    content: '';
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    will-change: width, left;
+}
+.material-textfield input[required]:focus~ label::before,
+.material-textfield label::before {
+    font-size: 12px;
+    top: -5rem;
+}
+.material-textfield input:invalid~ label::before {
+    font-size: 14px;
+    top: -37px;
+}
+.material-textfield.grey label::after {
+    background: #959595;
+}
+.material-textfield.grey input[required]:focus~ label::before,
+.material-textfield.grey label::before {
+    color: #aeaeae;
+}
+.material-textfield.grey input:invalid~ label::before {
+    color: #959595;
+}
+.invalid {
+    border-radius: 25px;
+    box-shadow: 0 0 6px 1px rgba(255, 20, 55, 0.6);
+}
 </style>
