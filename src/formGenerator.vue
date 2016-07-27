@@ -1,9 +1,9 @@
 <template lang="jade">
 	fieldset(v-if="schema != null")
 		.form-group(v-for="field in fields", v-if="fieldVisible(field)", :class="getFieldRowClasses(field)")
-				span.help(v-if="field.help")
-					i.fa.fa-question-circle
-					.helpText {{{field.help}}}
+			span.help(v-if="field.help")
+				i.fa.fa-question-circle
+				.helpText {{{field.help}}}
 			.field-wrap
 				component(:is="getFieldType(field)", :disabled="fieldDisabled(field)", :model.sync="model", :schema.sync="field")
 				label(data-content!="{{field.label}}") {{ field.label }}
