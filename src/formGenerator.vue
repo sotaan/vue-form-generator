@@ -5,7 +5,7 @@
 		      <div class="helpText">{{{field.help}}}</div></span>
 		    <div :class="getFieldWrapClasses(field)">
 		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
-		      <label v-if="isClassicLabel(field)" data-content="{{field.label}}">{{ field.label }} ff</label>
+		      <label v-if="isClassicLabel(field)" data-content="{{field.label}}">{{ field.label }}</label>
 		      <div v-if="field.buttons &amp;&amp; field.buttons.length &gt; 0" class="buttons">
 		        <button v-for="btn in field.buttons" @click="btn.onclick(model, field)" :class="btn.classes" class="btn btn-default">{{ btn.label }}</button>
 		      </div>
@@ -86,7 +86,8 @@
 
 		methods: {
 			isClassicLabel (field) {
-				if (field.type === "text" || field.type === "email" || field.type === "select")
+				if ( field.type === "text" || field.type === "email"
+					|| field.type === "select" || field.type === "dateTime")
 					return false;
 				return true;
 			},
