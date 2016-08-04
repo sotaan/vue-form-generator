@@ -43203,7 +43203,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 252 */
 /***/ function(module, exports) {
 
-	module.exports = "<!--.material-textfield.grey--><!--  input(type=\"text\", v-model=\"value\", :maxlength=\"schema.max\", :readonly=\"schema.readonly\", :disabled=\"disabled\", :placeholder=\"schema.placeholder\")--><!--  label(data-content=\"{{schema.label}}\") {{ schema.label }}*/span.input\n  input.input__field(type='text')\n  label.input__label(for='input')\n    span.input__label-content {{ schema.label }}-->";
+	module.exports = "<span class=\"input\"><input type=\"text\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
 
 /***/ },
 /* 253 */
