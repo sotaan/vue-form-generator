@@ -40921,7 +40921,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 129 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"input-group date\"><input type=\"text\" v-model=\"value\" :disabled=\"disabled\" class=\"form-control\"/><span class=\"input-group-addon\"><span class=\"glyphicon glyphicon-calendar\"></span></span></div>";
+	module.exports = "<div class=\"how input-group date\"><input type=\"text\" v-model=\"value\" :disabled=\"disabled\" placeholder=\"Date d'effet du contrat\" class=\"form-control\"/><span class=\"input-group-addon\"><span class=\"glyphicon glyphicon-calendar\"></span></span></div>";
 
 /***/ },
 /* 130 */
@@ -43203,7 +43203,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 252 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"input\"><input type=\"text\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
+	module.exports = "<span class=\"input\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
 
 /***/ },
 /* 253 */
