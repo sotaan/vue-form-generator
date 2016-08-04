@@ -86,7 +86,7 @@
 
 		methods: {
 			isClassicLabel (field) {
-				if (field.type === "text" || field.type === "email")
+				if (field.type === "text" || field.type === "email" || field.type === "select")
 					return false;
 				return true;
 			},
