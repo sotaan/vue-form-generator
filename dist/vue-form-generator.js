@@ -508,7 +508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 		methods: {
 			isClassicLabel: function isClassicLabel(field) {
-				if (field.type === "text" || field.type === "email") return false;
+				if (field.type === "text" || field.type === "email" || field.type === "select") return false;
 				return true;
 			},
 			getFieldWrapClasses: function getFieldWrapClasses(field) {
@@ -43286,7 +43286,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 258 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<fieldset v-if=\"schema != null\">\n\t<div class=\"col-md-6 col-sm-6 col-xs-12\">\n\t\t<div v-for=\"field in fields\" v-if=\"fieldVisible(field)\" :class=\"getFieldRowClasses(field)\" class=\"form-group\"><span v-if=\"field.help\" class=\"help\"><i class=\"fa fa-question-circle\"></i>\n\t      <div class=\"helpText\">{{{field.help}}}</div></span>\n\t    <div :class=\"getFieldWrapClasses(field)\">\n\t      <component :is=\"getFieldType(field)\" :disabled=\"fieldDisabled(field)\" :model.sync=\"model\" :schema.sync=\"field\"></component>\n\t      <label v-if=\"isClassicLabel(field)\" data-content=\"{{field.label}}\">{{ field.label }}</label>\n\t      <div v-if=\"field.buttons &amp;&amp; field.buttons.length &gt; 0\" class=\"buttons\">\n\t        <button v-for=\"btn in field.buttons\" @click=\"btn.onclick(model, field)\" :class=\"btn.classes\" class=\"btn btn-default\">{{ btn.label }}</button>\n\t      </div>\n\t    </div>\n\t    <div v-if=\"field.hint\" class=\"hint\">{{ field.hint }}</div>\n\t    <div v-if=\"field.errors &amp;&amp; field.errors.length &gt; 0\" class=\"errors\"><span v-for=\"error in field.errors\" track-by=\"$index\">{{ error }}</span></div>\n\t  </div>\n\t</div>\n</fieldset>\n";
+	module.exports = "\n<fieldset v-if=\"schema != null\">\n\t<div class=\"col-md-6 col-sm-6 col-xs-12\">\n\t\t<div v-for=\"field in fields\" v-if=\"fieldVisible(field)\" :class=\"getFieldRowClasses(field)\" class=\"form-group\"><span v-if=\"field.help\" class=\"help\"><i class=\"fa fa-question-circle\"></i>\n\t      <div class=\"helpText\">{{{field.help}}}</div></span>\n\t    <div :class=\"getFieldWrapClasses(field)\">\n\t      <component :is=\"getFieldType(field)\" :disabled=\"fieldDisabled(field)\" :model.sync=\"model\" :schema.sync=\"field\"></component>\n\t      <label v-if=\"isClassicLabel(field)\" data-content=\"{{field.label}}\">{{ field.label }} ff</label>\n\t      <div v-if=\"field.buttons &amp;&amp; field.buttons.length &gt; 0\" class=\"buttons\">\n\t        <button v-for=\"btn in field.buttons\" @click=\"btn.onclick(model, field)\" :class=\"btn.classes\" class=\"btn btn-default\">{{ btn.label }}</button>\n\t      </div>\n\t    </div>\n\t    <div v-if=\"field.hint\" class=\"hint\">{{ field.hint }}</div>\n\t    <div v-if=\"field.errors &amp;&amp; field.errors.length &gt; 0\" class=\"errors\"><span v-for=\"error in field.errors\" track-by=\"$index\">{{ error }}</span></div>\n\t  </div>\n\t</div>\n</fieldset>\n";
 
 /***/ },
 /* 259 */
