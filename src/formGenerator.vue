@@ -4,7 +4,7 @@
 			<div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"><span v-if="field.help" class="help"><i class="fa fa-question-circle"></i>
 		      <div class="helpText">{{{field.help}}}</div></span>
 		    <div :class="getFieldWrapClasses(field)">
-		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field" v-on:showHelp=""></component>
+		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
 		      <label v-if="isClassicLabel(field)" data-content="{{field.label}}">{{ field.label }}</label>
 		      <div v-if="field.buttons &amp;&amp; field.buttons.length &gt; 0" class="buttons">
 		        <button v-for="btn in field.buttons" @click="btn.onclick(model, field)" :class="btn.classes" class="btn btn-default">{{ btn.label }}</button>
@@ -193,7 +193,7 @@
 	// 		padding: 2px 5px;
 	// 	}
 	//
-		span.help {
+		input, select, textarea span.help {
 			margin-left: 0.3em;
 			position: relative;
 
