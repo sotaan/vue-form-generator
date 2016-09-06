@@ -159,7 +159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "/* ////// ANDROID FORM \\\\\\\\\\\\ */\n", ""]);
+	exports.push([module.id, "fieldset span.help {\n  margin-left: 0.3em;\n  position: relative;\n  /* This bridges the gap so you can mouse into the tooltip without it disappearing */\n  /* CSS Triangles - see Trevor's post */\n  /*.helpText:after {\n\t\t\tborder-left: solid transparent 10px;\n\t\t\tborder-right: solid transparent 10px;\n\t\t\tborder-top: solid #1496bb 10px;\n\t\t\tbottom: -10px;\n\t\t\tcontent: \" \";\n\t\t\theight: 0;\n\t\t\tleft: 50%;\n\t\t\tmargin-left: -13px;\n\t\t\tposition: absolute;\n\t\t\twidth: 0;\n\t\t}*/ }\n  fieldset span.help .helpText {\n    background-color: #444;\n    bottom: 30px;\n    color: #fff;\n    display: block;\n    left: 0px;\n    opacity: 0;\n    padding: 20px;\n    pointer-events: none;\n    position: absolute;\n    text-align: justify;\n    width: 300px;\n    -webkit-transition: all .25s ease-out;\n    transition: all .25s ease-out;\n    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);\n    border-radius: 6px; }\n    fieldset span.help .helpText a {\n      font-weight: bold;\n      text-decoration: underline; }\n  fieldset span.help .helpText:before {\n    bottom: -20px;\n    content: \" \";\n    display: block;\n    height: 20px;\n    left: 0;\n    position: absolute;\n    width: 100%; }\n  fieldset span.help:hover .helpText {\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0px);\n            transform: translateY(0px); }\n\n/* ////// ANDROID FORM \\\\\\\\\\\\ */\n", ""]);
 
 	// exports
 
@@ -27121,12 +27121,12 @@ return /******/ (function(modules) { // webpackBootstrap
 				if (this.schema.dateTimePickerOptions && this.schema.dateTimePickerOptions.format) return this.schema.dateTimePickerOptions.format;else return inputFormat;
 			},
 			formatValueToField: function formatValueToField(value) {
-				if (value != null) return (0, _moment2.default)(value, this.schema.format).format(this.getDateFormat());
+				if (value != null && value !== "") return (0, _moment2.default)(value, this.schema.format).format(this.getDateFormat());
 
 				return value;
 			},
 			formatValueToModel: function formatValueToModel(value) {
-				if (value != null) {
+				if (value != null && value !== "") {
 					var m = (0, _moment2.default)(value, this.getDateFormat());
 					if (this.schema.format) value = m.format(this.schema.format);else value = m.toDate().valueOf();
 				}
@@ -43203,7 +43203,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 252 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"input\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
+	module.exports = "<span class=\"input\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" @focus=\"this.$dispatch('showHelp')\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
 
 /***/ },
 /* 253 */
@@ -43286,7 +43286,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 258 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<fieldset v-if=\"schema != null\">\n\t<div class=\"col-md-6 col-sm-6 col-xs-12\">\n\t\t<div v-for=\"field in fields\" v-if=\"fieldVisible(field)\" :class=\"getFieldRowClasses(field)\" class=\"form-group\"><span v-if=\"field.help\" class=\"help\"><i class=\"fa fa-question-circle\"></i>\n\t      <div class=\"helpText\">{{{field.help}}}</div></span>\n\t    <div :class=\"getFieldWrapClasses(field)\">\n\t      <component :is=\"getFieldType(field)\" :disabled=\"fieldDisabled(field)\" :model.sync=\"model\" :schema.sync=\"field\"></component>\n\t      <label v-if=\"isClassicLabel(field)\" data-content=\"{{field.label}}\">{{ field.label }}</label>\n\t      <div v-if=\"field.buttons &amp;&amp; field.buttons.length &gt; 0\" class=\"buttons\">\n\t        <button v-for=\"btn in field.buttons\" @click=\"btn.onclick(model, field)\" :class=\"btn.classes\" class=\"btn btn-default\">{{ btn.label }}</button>\n\t      </div>\n\t    </div>\n\t    <div v-if=\"field.hint\" class=\"hint\">{{ field.hint }}</div>\n\t    <div v-if=\"field.errors &amp;&amp; field.errors.length &gt; 0\" class=\"errors\"><span v-for=\"error in field.errors\" track-by=\"$index\">{{ error }}</span></div>\n\t  </div>\n\t</div>\n</fieldset>\n";
+	module.exports = "\n<fieldset v-if=\"schema != null\">\n\t<div class=\"col-md-6 col-sm-6 col-xs-12\">\n\t\t<div v-for=\"field in fields\" v-if=\"fieldVisible(field)\" :class=\"getFieldRowClasses(field)\" class=\"form-group\"><span v-if=\"field.help\" class=\"help\"><i class=\"fa fa-question-circle\"></i>\n\t      <div class=\"helpText\">{{{field.help}}}</div></span>\n\t    <div :class=\"getFieldWrapClasses(field)\">\n\t      <component :is=\"getFieldType(field)\" :disabled=\"fieldDisabled(field)\" :model.sync=\"model\" :schema.sync=\"field\" v-on:showHelp=\"\"></component>\n\t      <label v-if=\"isClassicLabel(field)\" data-content=\"{{field.label}}\">{{ field.label }}</label>\n\t      <div v-if=\"field.buttons &amp;&amp; field.buttons.length &gt; 0\" class=\"buttons\">\n\t        <button v-for=\"btn in field.buttons\" @click=\"btn.onclick(model, field)\" :class=\"btn.classes\" class=\"btn btn-default\">{{ btn.label }}</button>\n\t      </div>\n\t    </div>\n\t    <div v-if=\"field.hint\" class=\"hint\">{{ field.hint }}</div>\n\t    <div v-if=\"field.errors &amp;&amp; field.errors.length &gt; 0\" class=\"errors\"><span v-for=\"error in field.errors\" track-by=\"$index\">{{ error }}</span></div>\n\t  </div>\n\t</div>\n</fieldset>\n";
 
 /***/ },
 /* 259 */

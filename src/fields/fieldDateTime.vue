@@ -24,14 +24,14 @@
 			},
 
 			formatValueToField(value) {
-				if (value != null)
+				if (value != null && value !== "")
 					return moment(value, this.schema.format).format(this.getDateFormat());
 
 				return value;
 			},
 
 			formatValueToModel(value) {
-				if (value != null) {
+				if (value != null && value !== "") {
 					let m = moment(value, this.getDateFormat());
 					if (this.schema.format)
 						value = m.format(this.schema.format);

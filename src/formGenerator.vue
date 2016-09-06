@@ -4,7 +4,7 @@
 			<div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"><span v-if="field.help" class="help"><i class="fa fa-question-circle"></i>
 		      <div class="helpText">{{{field.help}}}</div></span>
 		    <div :class="getFieldWrapClasses(field)">
-		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
+		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field" v-on:showHelp=""></component>
 		      <label v-if="isClassicLabel(field)" data-content="{{field.label}}">{{ field.label }}</label>
 		      <div v-if="field.buttons &amp;&amp; field.buttons.length &gt; 0" class="buttons">
 		        <button v-for="btn in field.buttons" @click="btn.onclick(model, field)" :class="btn.classes" class="btn btn-default">{{ btn.label }}</button>
@@ -183,9 +183,9 @@
 
 <style lang="sass">
 	//
-	// $errorColor: lighten(#F00, 0%);
+	$errorColor: lighten(#F00, 0%);
 	//
-	// fieldset {
+	fieldset {
 	//
 	// 	input, select, textarea {
 	// 		border-radius: 4px;
@@ -193,65 +193,65 @@
 	// 		padding: 2px 5px;
 	// 	}
 	//
-	// 	span.help {
-	// 		margin-left: 0.3em;
-	// 		position: relative;
-	//
-	// 		.helpText {
-	// 			background-color: #444;
-	// 			bottom: 30px;
-	// 			color: #fff;
-	// 			display: block;
-	// 			left: 0px;
-	// 			//margin-bottom: 15px;
-	// 			opacity: 0;
-	// 			padding: 20px;
-	// 			pointer-events: none;
-	// 			position: absolute;
-	// 			text-align: justify;
-	// 			width: 300px;
-	// 			//transform: translateY(10%);
-	// 			transition: all .25s ease-out;
-	// 			box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-	// 			border-radius: 6px;
-	//
-	// 			a {
-	// 				font-weight: bold;
-	// 				text-decoration: underline;
-	// 			}
-	// 		}
-	//
-	// 		/* This bridges the gap so you can mouse into the tooltip without it disappearing */
-	// 		.helpText:before {
-	// 			bottom: -20px;
-	// 			content: " ";
-	// 			display: block;
-	// 			height: 20px;
-	// 			left: 0;
-	// 			position: absolute;
-	// 			width: 100%;
-	// 		}
-	//
-	// 		/* CSS Triangles - see Trevor's post */
-	// 		/*.helpText:after {
-	// 			border-left: solid transparent 10px;
-	// 			border-right: solid transparent 10px;
-	// 			border-top: solid #1496bb 10px;
-	// 			bottom: -10px;
-	// 			content: " ";
-	// 			height: 0;
-	// 			left: 50%;
-	// 			margin-left: -13px;
-	// 			position: absolute;
-	// 			width: 0;
-	// 		}*/
-	//
-	// 		&:hover .helpText {
-	// 			opacity: 1;
-	// 			pointer-events: auto;
-	// 			transform: translateY(0px);
-	// 		}
-	// 	} // span.help
+		span.help {
+			margin-left: 0.3em;
+			position: relative;
+
+			.helpText {
+				background-color: #444;
+				bottom: 30px;
+				color: #fff;
+				display: block;
+				left: 0px;
+				//margin-bottom: 15px;
+				opacity: 0;
+				padding: 20px;
+				pointer-events: none;
+				position: absolute;
+				text-align: justify;
+				width: 300px;
+				//transform: translateY(10%);
+				transition: all .25s ease-out;
+				box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+				border-radius: 6px;
+
+				a {
+					font-weight: bold;
+					text-decoration: underline;
+				}
+			}
+
+			/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+			.helpText:before {
+				bottom: -20px;
+				content: " ";
+				display: block;
+				height: 20px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			/* CSS Triangles - see Trevor's post */
+			/*.helpText:after {
+				border-left: solid transparent 10px;
+				border-right: solid transparent 10px;
+				border-top: solid #1496bb 10px;
+				bottom: -10px;
+				content: " ";
+				height: 0;
+				left: 50%;
+				margin-left: -13px;
+				position: absolute;
+				width: 0;
+			}*/
+
+			&:hover .helpText {
+				opacity: 1;
+				pointer-events: auto;
+				transform: translateY(0px);
+			}
+		} // span.help
 	//
 	// 	.field-wrap {
 	// 		display: flex;
@@ -336,7 +336,7 @@
 	//
 	// 	} // .form-group
 	//
-	// } // fieldset
+	} // fieldset
 	/* ////// ANDROID FORM \\\\\\ */
 
 </style>
