@@ -250,10 +250,12 @@
 
 		} // span.help
 
-		.input input:focus, span.help {
-			opacity: 1;
-			pointer-events: auto;
-			transform: translateY(0px);
+		input:focus {
+			.helpText {
+				opacity: 1;
+				pointer-events: auto;
+				transform: translateY(0px);
+			}
 		}
 	//
 	// 	.field-wrap {
