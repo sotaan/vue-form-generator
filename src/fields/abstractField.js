@@ -91,8 +91,8 @@ export default {
 				this.schema.errors.splice(0); // Clear
 		},
 
-		toggleHelp () {
-			this.$set("schema.showHelp", !this.schema.showHelp)
+		toggleHelp (event) {
+			this.schema.showHelp = !this.schema.showHelp
 		}
 	},
 

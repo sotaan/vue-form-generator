@@ -196,9 +196,9 @@
 	// 	}
 	//
 		.showHelp {
-			opacity: 1;
-			pointer-events: auto;
-			transform: translateY(0px);
+			opacity: 1 !important;
+			pointer-events: auto !important;
+			transform: translateY(0px) !important;
 		}
 
 		span.help {
@@ -207,7 +207,7 @@
 
 			.helpText {
 				background-color: #444;
-				bottom: 30px;
+				bottom: 10px;
 				color: #fff;
 				display: block;
 				left: 0px;
@@ -222,6 +222,7 @@
 				transition: all .25s ease-out;
 				box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 				border-radius: 6px;
+				z-index: 999;
 
 				a {
 					font-weight: bold;

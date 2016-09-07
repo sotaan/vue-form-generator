@@ -159,7 +159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, "fieldset .showHelp {\n  opacity: 1;\n  pointer-events: auto;\n  -webkit-transform: translateY(0px);\n          transform: translateY(0px); }\n\nfieldset span.help {\n  margin-left: 0.3em;\n  position: relative;\n  /* This bridges the gap so you can mouse into the tooltip without it disappearing */\n  /* CSS Triangles - see Trevor's post */\n  /*.helpText:after {\n\t\t\tborder-left: solid transparent 10px;\n\t\t\tborder-right: solid transparent 10px;\n\t\t\tborder-top: solid #1496bb 10px;\n\t\t\tbottom: -10px;\n\t\t\tcontent: \" \";\n\t\t\theight: 0;\n\t\t\tleft: 50%;\n\t\t\tmargin-left: -13px;\n\t\t\tposition: absolute;\n\t\t\twidth: 0;\n\t\t}*/ }\n  fieldset span.help .helpText {\n    background-color: #444;\n    bottom: 30px;\n    color: #fff;\n    display: block;\n    left: 0px;\n    opacity: 0;\n    padding: 20px;\n    pointer-events: none;\n    position: absolute;\n    text-align: justify;\n    width: 300px;\n    -webkit-transition: all .25s ease-out;\n    transition: all .25s ease-out;\n    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);\n    border-radius: 6px; }\n    fieldset span.help .helpText a {\n      font-weight: bold;\n      text-decoration: underline; }\n  fieldset span.help .helpText:before {\n    bottom: -20px;\n    content: \" \";\n    display: block;\n    height: 20px;\n    left: 0;\n    position: absolute;\n    width: 100%; }\n\n/* ////// ANDROID FORM \\\\\\\\\\\\ */\n", ""]);
+	exports.push([module.id, "fieldset .showHelp {\n  opacity: 1 !important;\n  pointer-events: auto !important;\n  -webkit-transform: translateY(0px) !important;\n          transform: translateY(0px) !important; }\n\nfieldset span.help {\n  margin-left: 0.3em;\n  position: relative;\n  /* This bridges the gap so you can mouse into the tooltip without it disappearing */\n  /* CSS Triangles - see Trevor's post */\n  /*.helpText:after {\n\t\t\tborder-left: solid transparent 10px;\n\t\t\tborder-right: solid transparent 10px;\n\t\t\tborder-top: solid #1496bb 10px;\n\t\t\tbottom: -10px;\n\t\t\tcontent: \" \";\n\t\t\theight: 0;\n\t\t\tleft: 50%;\n\t\t\tmargin-left: -13px;\n\t\t\tposition: absolute;\n\t\t\twidth: 0;\n\t\t}*/ }\n  fieldset span.help .helpText {\n    background-color: #444;\n    bottom: 10px;\n    color: #fff;\n    display: block;\n    left: 0px;\n    opacity: 0;\n    padding: 20px;\n    pointer-events: none;\n    position: absolute;\n    text-align: justify;\n    width: 300px;\n    -webkit-transition: all .25s ease-out;\n    transition: all .25s ease-out;\n    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);\n    border-radius: 6px;\n    z-index: 999; }\n    fieldset span.help .helpText a {\n      font-weight: bold;\n      text-decoration: underline; }\n  fieldset span.help .helpText:before {\n    bottom: -20px;\n    content: \" \";\n    display: block;\n    height: 20px;\n    left: 0;\n    position: absolute;\n    width: 100%; }\n\n/* ////// ANDROID FORM \\\\\\\\\\\\ */\n", ""]);
 
 	// exports
 
@@ -26835,8 +26835,8 @@ return /******/ (function(modules) { // webpackBootstrap
 			clearValidationErrors: function clearValidationErrors() {
 				if ((0, _lodash.isUndefined)(this.schema.errors)) this.$set("schema.errors", []);else this.schema.errors.splice(0);
 			},
-			toggleHelp: function toggleHelp() {
-				this.$set("schema.showHelp", !this.schema.showHelp);
+			toggleHelp: function toggleHelp(event) {
+				this.schema.showHelp = !this.schema.showHelp;
 			}
 		},
 
@@ -43210,7 +43210,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 252 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"input\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" @focus=\"toggleHelp\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
+	module.exports = "<span class=\"input\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
 
 /***/ },
 /* 253 */
