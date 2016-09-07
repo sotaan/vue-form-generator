@@ -193,70 +193,68 @@
 	// 		padding: 2px 5px;
 	// 	}
 	//
-		input, select, textarea {
 
-			span.help {
-				margin-left: 0.3em;
-				position: relative;
+		span.help {
+			margin-left: 0.3em;
+			position: relative;
 
-				.helpText {
-					background-color: #444;
-					bottom: 30px;
-					color: #fff;
-					display: block;
-					left: 0px;
-					//margin-bottom: 15px;
-					opacity: 0;
-					padding: 20px;
-					pointer-events: none;
-					position: absolute;
-					text-align: justify;
-					width: 300px;
-					//transform: translateY(10%);
-					transition: all .25s ease-out;
-					box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-					border-radius: 6px;
+			.helpText {
+				background-color: #444;
+				bottom: 30px;
+				color: #fff;
+				display: block;
+				left: 0px;
+				//margin-bottom: 15px;
+				opacity: 0;
+				padding: 20px;
+				pointer-events: none;
+				position: absolute;
+				text-align: justify;
+				width: 300px;
+				//transform: translateY(10%);
+				transition: all .25s ease-out;
+				box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+				border-radius: 6px;
 
-					a {
-						font-weight: bold;
-						text-decoration: underline;
-					}
+				a {
+					font-weight: bold;
+					text-decoration: underline;
 				}
-
-				/* This bridges the gap so you can mouse into the tooltip without it disappearing */
-				.helpText:before {
-					bottom: -20px;
-					content: " ";
-					display: block;
-					height: 20px;
-					left: 0;
-					position: absolute;
-					width: 100%;
-				}
-
-				/* CSS Triangles - see Trevor's post */
-				/*.helpText:after {
-					border-left: solid transparent 10px;
-					border-right: solid transparent 10px;
-					border-top: solid #1496bb 10px;
-					bottom: -10px;
-					content: " ";
-					height: 0;
-					left: 50%;
-					margin-left: -13px;
-					position: absolute;
-					width: 0;
-				}*/
-
-
-			} // span.help
-			
-			&:focus .helpText {
-				opacity: 1;
-				pointer-events: auto;
-				transform: translateY(0px);
 			}
-		} // inputs
+
+			/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+			.helpText:before {
+				bottom: -20px;
+				content: " ";
+				display: block;
+				height: 20px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			/* CSS Triangles - see Trevor's post */
+			/*.helpText:after {
+				border-left: solid transparent 10px;
+				border-right: solid transparent 10px;
+				border-top: solid #1496bb 10px;
+				bottom: -10px;
+				content: " ";
+				height: 0;
+				left: 50%;
+				margin-left: -13px;
+				position: absolute;
+				width: 0;
+			}*/
+
+
+		} // span.help
+
+		.input input:focus, span.help {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translateY(0px);
+		}
 	//
 	// 	.field-wrap {
 	// 		display: flex;
