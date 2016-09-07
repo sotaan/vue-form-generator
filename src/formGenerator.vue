@@ -247,7 +247,7 @@
 			.helpText:after {
 				border-left: solid transparent 10px;
 				border-right: solid transparent 10px;
-				border-top: solid #1496bb 10px;
+				border-top: solid #444 10px;
 				bottom: -10px;
 				content: " ";
 				height: 0;
