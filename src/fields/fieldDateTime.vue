@@ -1,6 +1,6 @@
 <template lang="jade">
 	.how.input-group.date
-		input.form-control(type="text", v-model="value", :disabled="disabled", placeholder="Date d'effet du contrat")
+		input.form-control(type="text", v-model="value", :disabled="disabled", placeholder="Date d'effet du contrat", @focus="toggleHelp", @blur="toggleHelp")
 		span.input-group-addon
 			span.glyphicon.glyphicon-calendar
 </template>
