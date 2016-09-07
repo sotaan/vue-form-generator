@@ -202,8 +202,10 @@
 		}
 
 		span.help {
-			margin-left: 0.3em;
+			// margin-left: 0.3em;
 			position: relative;
+			display: block;
+			width: 100%;
 
 			.helpText {
 				background-color: #444;
@@ -217,7 +219,7 @@
 				pointer-events: none;
 				position: absolute;
 				text-align: justify;
-				width: 300px;
+				width: 100%;
 				//transform: translateY(10%);
 				transition: all .25s ease-out;
 				box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -242,7 +244,7 @@
 			}
 
 			/* CSS Triangles - see Trevor's post */
-			/*.helpText:after {
+			.helpText:after {
 				border-left: solid transparent 10px;
 				border-right: solid transparent 10px;
 				border-top: solid #1496bb 10px;
@@ -253,7 +255,7 @@
 				margin-left: -13px;
 				position: absolute;
 				width: 0;
-			}*/
+			}
 
 
 		} // span.help
