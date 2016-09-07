@@ -96,7 +96,7 @@ export default {
 		}
 	},
 
-	created: {
+	created () {
 		this.$set("schema.showHelp", false)
 	}
 };
