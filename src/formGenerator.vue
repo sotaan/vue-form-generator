@@ -1,7 +1,7 @@
 <template>
 	<fieldset v-if="schema != null">
 		<div class="col-md-6 col-sm-6 col-xs-12">
-			<div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"><span v-if="field.help" class="help"><i class="fa fa-question-circle"></i>
+			<div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"><span v-if="field.help" class="help">
 		      <div class="helpText">{{{field.help}}}</div></span>
 		    <div :class="getFieldWrapClasses(field)">
 		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
@@ -248,12 +248,14 @@
 					width: 0;
 				}*/
 
-				&:focus .helpText {
-					opacity: 1;
-					pointer-events: auto;
-					transform: translateY(0px);
-				}
+
 			} // span.help
+			
+			&:focus .helpText {
+				opacity: 1;
+				pointer-events: auto;
+				transform: translateY(0px);
+			}
 		} // inputs
 	//
 	// 	.field-wrap {
