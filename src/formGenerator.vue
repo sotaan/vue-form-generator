@@ -3,10 +3,10 @@
 		<div class="col-md-6 col-sm-6 col-xs-12">
 			<div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group">
 				<span v-if="field.help" class="help">
-		      <div class="helpText">{{{field.help}}}</div>
+		      <div class="helpText" :class="{ 'showHelp': field.showHelp }">{{{field.help}}}</div>
 				</span>
 		    <div :class="getFieldWrapClasses(field)">
-		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field" @focus="console.log('je teste mon evenement')"></component>
+		      <component :is="getFieldType(field)" :disabled="fieldDisabled(field)" :model.sync="model" :schema.sync="field"></component>
 		      <label v-if="isClassicLabel(field)" data-content="{{field.label}}">{{ field.label }}</label>
 		      <div v-if="field.buttons &amp;&amp; field.buttons.length &gt; 0" class="buttons">
 		        <button v-for="btn in field.buttons" @click="btn.onclick(model, field)" :class="btn.classes" class="btn btn-default">{{ btn.label }}</button>
@@ -195,6 +195,11 @@
 	// 		padding: 2px 5px;
 	// 	}
 	//
+		.showHelp {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translateY(0px);
+		}
 
 		span.help {
 			margin-left: 0.3em;
@@ -252,13 +257,7 @@
 
 		} // span.help
 
-		input:focus {
-			.helpText {
-				opacity: 1;
-				pointer-events: auto;
-				transform: translateY(0px);
-			}
-		}
+
 	//
 	// 	.field-wrap {
 	// 		display: flex;

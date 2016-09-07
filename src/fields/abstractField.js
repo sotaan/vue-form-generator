@@ -23,15 +23,15 @@ export default {
 
 				return val;
 			},
-			
+
 			set(newValue) {
 
 				if (isFunction(this.formatValueToModel))
 					newValue = this.formatValueToModel(newValue);
-				
+
 				if (isFunction(this.schema.set))
 					this.schema.set(this.model, newValue);
-				
+
 				else if (this.schema.model)
 					this.$set("model." + this.schema.model, newValue);
 			}
@@ -89,6 +89,14 @@ export default {
 				this.$set("schema.errors", []); // Be reactive
 			else
 				this.schema.errors.splice(0); // Clear
+		},
+
+		toggleHelp () {
+			this.$set("schema.showHelp", !this.schema.showHelp)
 		}
+	},
+
+	created: {
+		this.$set("schema.showHelp", false)
 	}
 };
