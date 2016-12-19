@@ -41636,7 +41636,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 167 */
 /***/ function(module, exports) {
 
-	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"form-control how\"><option :disabled=\"schema.required\" :value=\"null\" :selected=\"value == undefined\">{{schema.label}}</option><option v-for=\"item in items\" :value=\"getItemID(item)\">{{ getItemName(item) }}</option></select>";
+	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"form-control how\"><option :disabled=\"schema.required\" :value=\"null\" selected=\"selected\">{{schema.label}}</option><option v-for=\"item in items\" :value=\"getItemID(item)\">{{ getItemName(item) }}</option></select>";
 
 /***/ },
 /* 168 */
@@ -43304,7 +43304,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(8);
 
 	module.exports.createDefaultObject = function (schema) {
-		var obj = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+		var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
 		(0, _lodash.each)(schema.fields, function (field) {
 			if ((0, _lodash.get)(obj, field.model) === undefined && field.default !== undefined) (0, _lodash.set)(obj, field.model, field.default);
