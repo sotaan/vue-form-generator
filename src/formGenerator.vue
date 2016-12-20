@@ -1,7 +1,8 @@
 <template>
 	<fieldset v-if="schema != null">
 		<div class="col-md-6 col-sm-6 col-xs-12">
-			<div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group">
+			<!-- <div v-for="field in fields" v-if="fieldVisible(field)" :class="getFieldRowClasses(field)" class="form-group"> -->
+			<div v-for="field in visibleFields" :class="getFieldRowClasses(field)" class="form-group">
 				<span v-if="field.help" class="help">
 		      <div class="helpText" :class="{ 'showHelp': field.showHelp }">{{{field.help}}}</div>
 				</span>
@@ -61,6 +62,10 @@
 				}
 
 				return res;
+			},
+
+			visibleFields () {
+				return this.fields.filter((field) => this.fieldVisible(field))
 			}
 		},
 

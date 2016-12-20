@@ -1,5 +1,6 @@
 var webpack = require("webpack");
 var version = require("./package.json").version;
+var ProgressBarPlugin = require('progress-bar-webpack-plugin');
 var banner = "/**\n" + " * vue-form-generator v" + version + "\n" + " * https://github.com/icebob/vue-form-generator\n" + " * Released under the MIT License.\n" + " */\n";
 
 var loaders = [
@@ -25,6 +26,7 @@ module.exports = [
         },
 
         plugins: [
+            new ProgressBarPlugin(),
             new webpack.optimize.DedupePlugin(),
             new webpack.DefinePlugin({
                 'process.env' : {
@@ -42,7 +44,7 @@ module.exports = [
 
         resolve: {
             packageAlias: 'browser'
-        }        
+        }
     },
 
     {
@@ -54,6 +56,7 @@ module.exports = [
             libraryTarget: "umd"
         },
         plugins: [
+            new ProgressBarPlugin(),
             new webpack.optimize.UglifyJsPlugin({
                 compress: {
                     warnings: false
@@ -64,7 +67,7 @@ module.exports = [
                 'process.env' : {
                     NODE_ENV : JSON.stringify('production')
                 }
-            }),        
+            }),
             new webpack.BannerPlugin(banner, {
                 raw: true
             })
@@ -76,7 +79,7 @@ module.exports = [
 
         resolve: {
             packageAlias: 'browser'
-        }        
+        }
 
     }
 
