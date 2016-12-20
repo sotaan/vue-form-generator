@@ -41636,7 +41636,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 167 */
 /***/ function(module, exports) {
 
-	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"form-control how\"><option :disabled=\"schema.required\" :value=\"null\" selected=\"selected\">{{schema.label}}</option><option v-for=\"item in items\" :value=\"getItemID(item)\">{{ getItemName(item) }}</option></select>";
+	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"form-control how\"><option :disabled=\"schema.required\" :value=\"null\" :selected=\"true\">{{schema.label}}</option><option v-for=\"item in items\" :value=\"getItemID(item)\">{{ getItemName(item) }}</option></select>";
 
 /***/ },
 /* 168 */
