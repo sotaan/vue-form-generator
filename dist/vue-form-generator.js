@@ -43382,34 +43382,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	var resources = {
-		fieldIsRequired: "This field is required!",
-		invalidFormat: "Invalid format!",
+		fieldIsRequired: "Champs obligatoire",
+		invalidFormat: "Format invalide",
 
-		numberTooSmall: "The number is too small! Minimum: {0}",
-		numberTooBig: "The number is too big! Maximum: {0}",
-		invalidNumber: "Invalid number",
+		numberTooSmall: "Le numéro est trop petit ! Minimum: {0}",
+		numberTooBig: "Le numéro est trop grand ! Maximum: {0}",
+		invalidNumber: "Numéro Invalide",
 
-		textTooSmall: "The length of text is too small! Current: {0}, Minimum: {1}",
-		textTooBig: "The length of text is too big! Current: {0}, Maximum: {1}",
-		thisNotText: "This is not a text!",
+		textTooSmall: "La longueur du texte est trop petite ! Actuellement : {0}, Minimum : {1}",
+		textTooBig: "La longueur du texte est trop grande ! Actuellement: {0}, Maximum: {1}",
+		thisNotText: "Ce n’est pas du texte !",
 
-		thisNotArray: "This is not an array!",
+		thisNotArray: "Ce n’est pas un tableau !",
 
-		selectMinItems: "Select minimum {0} items!",
-		selectMaxItems: "Select maximum {0} items!",
+		selectMinItems: "Sélectionnez un minimum {0} d’éléments !",
+		selectMaxItems: "Sélectionnez un maximum {0} d’éléments !",
 
-		invalidDate: "Invalid date!",
-		dateIsEarly: "The date is too early! Current: {0}, Minimum: {1}",
-		dateIsLate: "The date is too late! Current: {0}, Maximum: {1}",
+		invalidDate: "Date invalide !",
+		dateIsEarly: "La date est trop tôt ! Actuellement : {0}, Minimum: {1}",
+		dateIsLate: "La date est trop tard ! Actuellement : {0}, Maximum: {1}",
 
-		invalidEmail: "Invalid e-mail address!",
-		invalidURL: "Invalid URL!",
+		invalidEmail: "Adresse email invalide !",
+		invalidURL: "URL invalide !",
 
-		invalidCard: "Invalid card format!",
-		invalidCardNumber: "Invalid card number!",
+		invalidCard: "Format de carte invalide !",
+		invalidCardNumber: "Numéro de carte invalide !",
 
-		invalidTextContainNumber: "Invalid text! Cannot contains numbers or special characters",
-		invalidTextContainSpec: "Invalid text! Cannot contains special characters"
+		invalidTextContainNumber: "Texte invalide ! Ne peut contenir de chiffres ou caractères spéciaux !",
+		invalidTextContainSpec: "Texte invalide ! Ne peut contenir de caractères spéciaux !"
 	};
 
 	module.exports = {

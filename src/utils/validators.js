@@ -20,42 +20,42 @@ function msg(text) {
 }
 
 let resources = {
-	fieldIsRequired: "This field is required!",
-	invalidFormat: "Invalid format!",
+	fieldIsRequired: "Champs obligatoire",
+	invalidFormat: "Format invalide",
 
-	numberTooSmall: "The number is too small! Minimum: {0}",
-	numberTooBig: "The number is too big! Maximum: {0}",
-	invalidNumber: "Invalid number",
+	numberTooSmall: "Le numéro est trop petit ! Minimum: {0}",
+	numberTooBig: "Le numéro est trop grand ! Maximum: {0}",
+	invalidNumber: "Numéro Invalide",
 
-	textTooSmall: "The length of text is too small! Current: {0}, Minimum: {1}",
-	textTooBig: "The length of text is too big! Current: {0}, Maximum: {1}",
-	thisNotText: "This is not a text!",
+	textTooSmall: "La longueur du texte est trop petite ! Actuellement : {0}, Minimum : {1}",
+	textTooBig: "La longueur du texte est trop grande ! Actuellement: {0}, Maximum: {1}",
+	thisNotText: "Ce n’est pas du texte !",
 
-	thisNotArray: "This is not an array!",
+	thisNotArray: "Ce n’est pas un tableau !",
 
-	selectMinItems: "Select minimum {0} items!",
-	selectMaxItems: "Select maximum {0} items!",
+	selectMinItems: "Sélectionnez un minimum {0} d’éléments !",
+	selectMaxItems: "Sélectionnez un maximum {0} d’éléments !",
 
-	invalidDate: "Invalid date!",
-	dateIsEarly: "The date is too early! Current: {0}, Minimum: {1}",
-	dateIsLate: "The date is too late! Current: {0}, Maximum: {1}",
+	invalidDate: "Date invalide !",
+	dateIsEarly: "La date est trop tôt ! Actuellement : {0}, Minimum: {1}",
+	dateIsLate: "La date est trop tard ! Actuellement : {0}, Maximum: {1}",
 
-	invalidEmail: "Invalid e-mail address!",
-	invalidURL: "Invalid URL!",
+	invalidEmail: "Adresse email invalide !",
+	invalidURL: "URL invalide !",
 
-	invalidCard: "Invalid card format!",
-	invalidCardNumber: "Invalid card number!",
+	invalidCard: "Format de carte invalide !",
+	invalidCardNumber: "Numéro de carte invalide !",
 
-	invalidTextContainNumber: "Invalid text! Cannot contains numbers or special characters",
-	invalidTextContainSpec: "Invalid text! Cannot contains special characters"
+	invalidTextContainNumber: "Texte invalide ! Ne peut contenir de chiffres ou caractères spéciaux !",
+	invalidTextContainSpec: "Texte invalide ! Ne peut contenir de caractères spéciaux !"
 };
 
 module.exports = {
 
 	resources,
-	
+
 	required(value, field) {
-		return checkEmpty(value, field.required); 
+		return checkEmpty(value, field.required);
 	},
 
 	number(value, field) {
@@ -69,7 +69,7 @@ module.exports = {
 			if (!isNil(field.max) && value > field.max)
 				err.push(msg(resources.numberTooBig, field.max));
 
-		} else 
+		} else
 			err.push(msg(resources.invalidNumber));
 
 		return err;
@@ -100,7 +100,7 @@ module.exports = {
 			if (!isNil(field.max) && value.length > field.max)
 				err.push(msg(resources.textTooBig, value.length, field.max));
 
-		} else 
+		} else
 			err.push(msg(resources.thisNotText));
 
 		return err;
@@ -125,13 +125,13 @@ module.exports = {
 				if (value.length > field.max)
 					return [msg(resources.selectMaxItems, field.max)];
 		}
-	},	
+	},
 
 	date(value, field) {
 		let res = checkEmpty(value, field.required); if (res != null) return res;
 
 		let m = moment(value);
-		if (!m.isValid()) 
+		if (!m.isValid())
 			return [msg(resources.invalidDate)];
 
 		let err = [];
@@ -167,7 +167,7 @@ module.exports = {
 		let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		if (!re.test(value))
 			return [msg(resources.invalidEmail)];
-	},	
+	},
 
 	url(value, field) {
 		let res = checkEmpty(value, field.required); if (res != null) return res;
@@ -175,12 +175,12 @@ module.exports = {
 		let re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
 		if (!re.test(value))
 			return [msg(resources.invalidURL)];
-	},	
+	},
 
 	creditCard(value, field) {
 		let res = checkEmpty(value, field.required); if (res != null) return res;
 
-		/*  From validator.js code 
+		/*  From validator.js code
 			https://github.com/chriso/validator.js/blob/master/src/lib/isCreditCard.js
 		*/
 		const creditCard = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
@@ -215,7 +215,7 @@ module.exports = {
 	alpha(value, field) {
 		let res = checkEmpty(value, field.required); if (res != null) return res;
 
-		let re = /^[a-zA-Z]*$/;		
+		let re = /^[a-zA-Z]*$/;
 		if (!re.test(value))
 			return [msg(resources.invalidTextContainNumber)];
 	},
@@ -223,7 +223,7 @@ module.exports = {
 	alphaNumeric(value, field) {
 		let res = checkEmpty(value, field.required); if (res != null) return res;
 
-		let re = /^[a-zA-Z0-9]*$/;	
+		let re = /^[a-zA-Z0-9]*$/;
 		if (!re.test(value))
 			return [msg(resources.invalidTextContainSpec)];
 	}
