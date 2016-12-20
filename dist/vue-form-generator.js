@@ -43213,11 +43213,37 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 251 */
-12,
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _abstractField = __webpack_require__(13);
+
+	var _abstractField2 = _interopRequireDefault(_abstractField);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  mixins: [_abstractField2.default],
+
+	  computed: {
+	    spanClass: function spanClass() {
+	      var _class = { invalid: false };
+	      if (this.schema.errors.length) _class.invalid = true;
+	      return _class;
+	    }
+	  }
+	};
+
+/***/ },
 /* 252 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"input\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
+	module.exports = "<span :class=\"spanClass\" class=\"input\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"input__field\"/><label for=\"input\" class=\"input__label\"><span class=\"input__label-content\">{{ schema.label }}</span></label></span>";
 
 /***/ },
 /* 253 */
