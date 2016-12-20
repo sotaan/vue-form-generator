@@ -40928,7 +40928,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 129 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"how input-group date\"><input type=\"text\" v-model=\"value\" :disabled=\"disabled\" placeholder=\"Date d'effet du contrat\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"form-control\"/><span class=\"input-group-addon\"><span class=\"glyphicon glyphicon-calendar\"></span></span></div>";
+	module.exports = "<div class=\"how input-group date\"><input type=\"text\" v-model=\"value\" :disabled=\"disabled\" placeholder=\"Date d'effet du contrat\" @focus=\"toggleHelp\" class=\"form-control\"/><span class=\"input-group-addon\"><span class=\"glyphicon glyphicon-calendar\"></span></span></div>";
 
 /***/ },
 /* 130 */
@@ -41005,7 +41005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 134 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"material-textfield grey\" _v-282db3bb=\"\"><input type=\"email\" v-model=\"value\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" _v-282db3bb=\"\"><label data-content=\"{{schema.label}}\" _v-282db3bb=\"\">{{ schema.label }}</label></div>";
+	module.exports = "<span class=\"input\" _v-282db3bb=\"\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"input__field\" _v-282db3bb=\"\"><label for=\"input\" class=\"input__label\" _v-282db3bb=\"\"><span class=\"input__label-content\" _v-282db3bb=\"\">{{ schema.label }}</span></label></span>";
 
 /***/ },
 /* 135 */
