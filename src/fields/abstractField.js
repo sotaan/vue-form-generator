@@ -8,6 +8,12 @@ export default {
 	],
 
 	computed: {
+		spanClass () {
+			const _class = { invalid: false }
+			if (this.schema.errors && this.schema.errors.length) _class.invalid = true
+			return _class
+		},
+
 		value: {
 			cache: false,
 			get() {

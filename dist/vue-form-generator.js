@@ -26777,6 +26777,13 @@ return /******/ (function(modules) { // webpackBootstrap
 		props: ["model", "schema", "disabled"],
 
 		computed: {
+			spanClass: function spanClass() {
+				var _class = { invalid: false };
+				if (this.schema.errors && this.schema.errors.length) _class.invalid = true;
+				return _class;
+			},
+
+
 			value: {
 				cache: false,
 				get: function get() {
@@ -40935,7 +40942,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 129 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"how input-group date\"><input type=\"text\" v-model=\"value\" :disabled=\"disabled\" placeholder=\"Date d'effet du contrat\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"form-control\"/><span class=\"input-group-addon\"><span class=\"glyphicon glyphicon-calendar\"></span></span></div>";
+	module.exports = "<div :class=\"spanClass\" class=\"how input-group date\"><input type=\"text\" v-model=\"value\" :disabled=\"disabled\" placeholder=\"Date d'effet du contrat\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"form-control\"/><span class=\"input-group-addon\"><span class=\"glyphicon glyphicon-calendar\"></span></span></div>";
 
 /***/ },
 /* 130 */
@@ -41012,7 +41019,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 134 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"input\" _v-282db3bb=\"\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"input__field\" _v-282db3bb=\"\"><label for=\"input\" class=\"input__label\" _v-282db3bb=\"\"><span class=\"input__label-content\" _v-282db3bb=\"\">{{ schema.label }}</span></label></span>";
+	module.exports = "<span :class=\"spanClass\" class=\"input\" _v-282db3bb=\"\"><input type=\"text\" v-model=\"value\" :maxlength=\"schema.max\" :readonly=\"schema.readonly\" :disabled=\"disabled\" :placeholder=\"schema.placeholder\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"input__field\" _v-282db3bb=\"\"><label for=\"input\" class=\"input__label\" _v-282db3bb=\"\"><span class=\"input__label-content\" _v-282db3bb=\"\">{{ schema.label }}</span></label></span>";
 
 /***/ },
 /* 135 */
@@ -41643,7 +41650,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 167 */
 /***/ function(module, exports) {
 
-	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" class=\"form-control how\"><option :disabled=\"schema.required\" :value=\"null\" :selected=\"true\">{{schema.label}}</option><option v-for=\"item in items\" :value=\"getItemID(item)\">{{ getItemName(item) }}</option></select>";
+	module.exports = "<select v-model=\"value\" :disabled=\"disabled\" @focus=\"toggleHelp\" @blur=\"toggleHelp\" :class=\"spanClass\" class=\"form-control how\"><option :disabled=\"schema.required\" :value=\"null\" :selected=\"true\">{{schema.label}}</option><option v-for=\"item in items\" :value=\"getItemID(item)\">{{ getItemName(item) }}</option></select>";
 
 /***/ },
 /* 168 */
@@ -43213,33 +43220,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _abstractField = __webpack_require__(13);
-
-	var _abstractField2 = _interopRequireDefault(_abstractField);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  mixins: [_abstractField2.default],
-
-	  computed: {
-	    spanClass: function spanClass() {
-	      var _class = { invalid: false };
-	      if (this.schema.errors.length) _class.invalid = true;
-	      return _class;
-	    }
-	  }
-	};
-
-/***/ },
+12,
 /* 252 */
 /***/ function(module, exports) {
 

@@ -1,5 +1,5 @@
 <template lang="jade">
-	select.form-control.how(v-model="value", :disabled="disabled", @focus="toggleHelp", @blur="toggleHelp")
+	select.form-control.how(v-model="value", :disabled="disabled", @focus="toggleHelp", @blur="toggleHelp", :class="spanClass")
 		option(:disabled="schema.required", :value="null", :selected="true") {{schema.label}}
 		option(v-for="item in items", :value="getItemID(item)") {{ getItemName(item) }}
 </template>

@@ -9,15 +9,7 @@
 	import abstractField from "./abstractField";
 
 	export default {
-		mixins: [ abstractField ],
-
-    computed: {
-      spanClass () {
-        const _class = { invalid: false }
-        if (this.schema.errors.length) _class.invalid = true
-        return _class
-      }
-    }
+		mixins: [ abstractField ]
 	};
 
 </script>
